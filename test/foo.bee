@@ -1,0 +1,6 @@
+extern print(int) -> int
+
+def main int a
+    b = [1, 2, 3]
+    print(b[0])
+end
