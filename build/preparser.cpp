@@ -158,9 +158,7 @@ extern int zzdebug;
     TEXTERN = 271,
     TOPENBRACKET = 272,
     TCLOSEBRACKET = 273,
-    TSTAR = 274,
-    TCOLON = 275,
-    TEND = 276
+    TSTAR = 274
   };
 #endif
 /* Tokens.  */
@@ -181,8 +179,6 @@ extern int zzdebug;
 #define TOPENBRACKET 272
 #define TCLOSEBRACKET 273
 #define TSTAR 274
-#define TCOLON 275
-#define TEND 276
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -194,7 +190,7 @@ union YYSTYPE
   std::string *string;
   int number;
 
-#line 198 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:355  */
+#line 194 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -211,7 +207,7 @@ int zzparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 215 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:358  */
+#line 211 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -456,7 +452,7 @@ union yyalloc
 #define YYLAST   69
 
 /* YYNTOKENS -- Number of terminals.  */
-#define YYNTOKENS  22
+#define YYNTOKENS  20
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  13
 /* YYNRULES -- Number of rules.  */
@@ -467,7 +463,7 @@ union yyalloc
 /* YYTRANSLATE[YYX] -- Symbol number corresponding to YYX as returned
    by yylex, with out-of-bounds checking.  */
 #define YYUNDEFTOK  2
-#define YYMAXUTOK   276
+#define YYMAXUTOK   274
 
 #define YYTRANSLATE(YYX)                                                \
   ((unsigned int) (YYX) <= YYMAXUTOK ? yytranslate[YYX] : YYUNDEFTOK)
@@ -503,7 +499,7 @@ static const yytype_uint8 yytranslate[] =
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     1,     2,     3,     4,
        5,     6,     7,     8,     9,    10,    11,    12,    13,    14,
-      15,    16,    17,    18,    19,    20,    21
+      15,    16,    17,    18,    19
 };
 
 #if YYDEBUG
@@ -525,9 +521,9 @@ static const char *const yytname[] =
   "$end", "error", "$undefined", "TIDENTIFIER", "TINT", "TBINOP",
   "TOPENPAREN", "TCLOSEPAREN", "TOPENBRACE", "TCLOSEBRACE", "TFUNC",
   "TVAR", "TCAST", "TWDOUBLE", "TWINT", "TEQUALS", "TEXTERN",
-  "TOPENBRACKET", "TCLOSEBRACKET", "TSTAR", "TCOLON", "TEND", "$accept",
-  "program", "statments", "constExpr", "var", "call", "func", "funcArgs",
-  "typeArgs", "valueArgs", "cast", "type", "extern", YY_NULLPTR
+  "TOPENBRACKET", "TCLOSEBRACKET", "TSTAR", "$accept", "program",
+  "statments", "constExpr", "var", "call", "func", "funcArgs", "typeArgs",
+  "valueArgs", "cast", "type", "extern", YY_NULLPTR
 };
 #endif
 
@@ -537,8 +533,7 @@ static const char *const yytname[] =
 static const yytype_uint16 yytoknum[] =
 {
        0,   256,   257,   258,   259,   260,   261,   262,   263,   264,
-     265,   266,   267,   268,   269,   270,   271,   272,   273,   274,
-     275,   276
+     265,   266,   267,   268,   269,   270,   271,   272,   273,   274
 };
 # endif
 
@@ -621,20 +616,20 @@ static const yytype_int8 yycheck[] =
 static const yytype_uint8 yystos[] =
 {
        0,     3,     4,     5,     6,    10,    11,    16,    17,    18,
-      19,    23,    24,    25,    26,    27,    28,    32,    34,     6,
-      12,    15,    25,     3,     3,     3,     0,    25,     5,    31,
-      13,    14,    33,    25,     7,     6,     6,     6,    25,     7,
-      25,    29,     4,    30,     7,    33,     7,     7,    33,     8,
-       3,    12,    24,    33,     9
+      19,    21,    22,    23,    24,    25,    26,    30,    32,     6,
+      12,    15,    23,     3,     3,     3,     0,    23,     5,    29,
+      13,    14,    31,    23,     7,     6,     6,     6,    23,     7,
+      23,    27,     4,    28,     7,    31,     7,     7,    31,     8,
+       3,    12,    22,    31,     9
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
-       0,    22,    23,    23,    24,    24,    25,    25,    25,    25,
-      25,    25,    25,    25,    25,    25,    25,    25,    25,    25,
-      26,    27,    28,    29,    29,    30,    30,    31,    31,    32,
-      33,    33,    34
+       0,    20,    21,    21,    22,    22,    23,    23,    23,    23,
+      23,    23,    23,    23,    23,    23,    23,    23,    23,    23,
+      24,    25,    26,    27,    27,    28,    28,    29,    29,    30,
+      31,    31,    32
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
@@ -1323,61 +1318,61 @@ yyreduce:
         case 2:
 #line 49 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     {  }
-#line 1327 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1322 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 3:
 #line 50 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     {  }
-#line 1333 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1328 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 4:
 #line 52 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     {  }
-#line 1339 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1334 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 5:
 #line 53 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     {  }
-#line 1345 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1340 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 6:
 #line 55 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { ARCCurrentFunc = *(yyvsp[0].string); }
-#line 1351 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1346 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 7:
 #line 56 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { ARC[ARCCurrentFunc][*(yyvsp[0].string)] = 0; }
-#line 1357 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1352 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 8:
 #line 57 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { ARC[ARCCurrentFunc][*(yyvsp[0].string)]++; }
-#line 1363 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1358 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 12:
 #line 62 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1369 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1364 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 13:
 #line 63 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1375 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1370 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 14:
 #line 64 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1381 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1376 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 20:
@@ -1385,13 +1380,13 @@ yyreduce:
     {
     (yyval.string) = (yyvsp[-3].string);
   }
-#line 1389 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1384 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 21:
 #line 86 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     {}
-#line 1395 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1390 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 22:
@@ -1399,71 +1394,71 @@ yyreduce:
     {
     (yyval.string) = (yyvsp[-6].string);
   }
-#line 1403 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1398 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 23:
 #line 92 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1409 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1404 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 24:
 #line 93 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1415 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1410 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 25:
 #line 95 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1421 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1416 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 26:
 #line 96 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1427 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1422 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 27:
 #line 98 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1433 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1428 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 28:
 #line 99 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1439 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1434 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 29:
 #line 101 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1445 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1440 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 30:
 #line 103 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1451 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1446 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 31:
 #line 104 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1457 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1452 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
   case 32:
 #line 106 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1463 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1458 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
     break;
 
 
-#line 1467 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
+#line 1462 "/Users/zoe/Developer/hive/hive/build/preparser.cpp" /* yacc.c:1663  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires

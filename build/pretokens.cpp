@@ -392,7 +392,7 @@ struct yy_trans_info
 static yyconst flex_int16_t yy_accept[50] =
     {   0,
         0,    0,   23,   21,   20,   20,   19,    3,    4,   15,
-       16,   16,    1,   17,   21,   21,   13,   14,   18,   18,
+       15,   15,    1,   16,   21,   21,   13,   14,   18,   18,
        18,   18,   11,   12,   20,   19,    5,    2,    1,    0,
         0,   18,   18,   18,   18,    2,    0,    9,   18,   18,
         7,    0,   18,    6,    0,   18,    8,   10,    0
@@ -892,21 +892,21 @@ case 15:
 YY_RULE_SETUP
 #line 82 "/Users/zoe/Developer/hive/hive/pre/lexer/tokens.l"
 {
-  SAVE_TOKEN; return TSTAR;
-}
+  SAVE_TOKEN; return TBINOP;
+} 
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
 #line 86 "/Users/zoe/Developer/hive/hive/pre/lexer/tokens.l"
 {
-  SAVE_TOKEN; return TBINOP;
-} 
+  SAVE_TOKEN; return TEQUALS;
+}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
 #line 90 "/Users/zoe/Developer/hive/hive/pre/lexer/tokens.l"
 {
-  SAVE_TOKEN; return TEQUALS;
+  SAVE_TOKEN; return TSTAR;
 }
 	YY_BREAK
 case 18:

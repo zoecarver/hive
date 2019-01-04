@@ -74,9 +74,7 @@ extern int zzdebug;
     TEXTERN = 271,
     TOPENBRACKET = 272,
     TCLOSEBRACKET = 273,
-    TSTAR = 274,
-    TCOLON = 275,
-    TEND = 276
+    TSTAR = 274
   };
 #endif
 /* Tokens.  */
@@ -97,8 +95,6 @@ extern int zzdebug;
 #define TOPENBRACKET 272
 #define TCLOSEBRACKET 273
 #define TSTAR 274
-#define TCOLON 275
-#define TEND 276
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -110,7 +106,7 @@ union YYSTYPE
   std::string *string;
   int number;
 
-#line 114 "preparser.h" /* yacc.c:1916  */
+#line 110 "preparser.h" /* yacc.c:1916  */
 };
 
 typedef union YYSTYPE YYSTYPE;
