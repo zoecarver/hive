@@ -53,11 +53,15 @@ Value* PointerSetAST::codeGen() {
 }
 
 Value* VariableGetAST::codeGen() {
+	Value* arrayAlloca = dyn_cast_or_null<Value>(namedArrays[name].first);
+		if (arrayAlloca != nullptr) return arrayAlloca; // TODO: this will not work because we also need the sizes array
+
+
 	Value* alloca = dyn_cast_or_null<Value>(namedVariables[name]);
 	if(alloca == nullptr)
 		return dyn_cast_or_null<Value>(namedArgs[name]); // TODO: if this is a pointer we still will need to free it
 
-	Value* retValue = getPointer ? alloca : mBuilder.CreateLoad(alloca);
+	Value* retValue = getPointer ? alloca : mBuilder.CreateLoad(alloca); // TODO: this also needs to be applied to above cases
 
 	return retValue; // TODO: fix below
 
@@ -104,7 +108,7 @@ Value* ArrayAST::codeGen() {
 	Function* mallocCall = mModule->getFunction("malloc");
 	std::vector<Value*> mallocArgs = {ConstantInt::get(mContext, APInt(32, arraySize))};
 
-	AllocaInst* alloca = CreateBlockAlloca(func, name, pi8);
+//	AllocaInst* alloca = CreateBlockAlloca(func, name, pi8);
 	Value* mallocVal = mBuilder.CreateCall(mallocCall, mallocArgs);
 
 	// make an array to store the sizes we need to access to get indexs of our main array
@@ -143,24 +147,25 @@ Value* ArrayAST::codeGen() {
 		count++;
 	}
 
-	mBuilder.CreateStore(mallocVal, alloca);
-	mBuilder.CreateStore(sizesArray, sizesAlloca);
-	namedArrays[name] = std::make_pair(alloca, sizesAlloca);
+	// TODO: we do not use `sizesAlloca`
+    //	mBuilder.CreateStore(mallocVal, alloca);
+    //	mBuilder.CreateStore(sizesArray, sizesAlloca);
+    //	namedArrays[name] = std::make_pair(alloca, sizesAlloca);
 
-	return alloca;
+	return mallocVal;
 }
 
 Value* ArrayGetAST::codeGen() {
-	auto a = namedArrays[arrayName];
-	auto* array = mBuilder.CreateLoad(a.first);
-	auto* sizes = mBuilder.CreateLoad(a.second);
+	auto a = namedVariables[arrayName];
+	auto* array = mBuilder.CreateLoad(a);
+//	auto* sizes = mBuilder.CreateLoad(a.second);
 
 	// bitcast array to type
 	Instruction* arrayCastInst = new BitCastInst(array, pi32); // TODO: this type needs to be dynamic
 	mBuilder.Insert(arrayCastInst); // TODO is this nessisary
 
-	auto* sizeElement = mBuilder.CreateGEP(sizes, index->codeGen());
-	auto* arrayIndex = mBuilder.CreateLoad(sizeElement);
+//	auto* sizeElement = mBuilder.CreateGEP(sizes, index->codeGen());
+	auto* arrayIndex = index->codeGen(); // mBuilder.CreateLoad(sizeElement);
 
 	auto* element = mBuilder.CreateGEP(arrayCastInst, arrayIndex);
 	return mBuilder.CreateLoad(element);

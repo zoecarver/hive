@@ -64,6 +64,10 @@ ID       [a-z][a-z0-9]*
   SAVE_TOKEN; return TWINT;
 }
 
+"array" {
+  SAVE_TOKEN; return TWARRAY;
+}
+
 "extern" {
   SAVE_TOKEN; return TEXTERN;
 }

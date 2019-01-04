@@ -361,8 +361,8 @@ static void yy_fatal_error (yyconst char msg[]  );
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
 
-#define YY_NUM_RULES 24
-#define YY_END_OF_BUFFER 25
+#define YY_NUM_RULES 25
+#define YY_END_OF_BUFFER 26
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -370,14 +370,14 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static yyconst flex_int16_t yy_accept[56] =
+static yyconst flex_int16_t yy_accept[61] =
     {   0,
-        0,    0,   25,   23,   22,   22,   21,    4,    5,   17,
-       18,    3,   18,    1,   19,   23,   15,   16,   20,   20,
-       20,   20,   20,   13,   14,   22,   21,    6,    2,    1,
-        0,   20,   20,   20,   20,   20,   20,   20,    2,    0,
-        7,   20,   12,   20,   10,    8,    0,   20,   20,   18,
-       20,   20,    9,   11,    0
+        0,    0,   26,   24,   23,   23,   22,    4,    5,   18,
+       19,    3,   19,    1,   20,   24,   16,   17,   21,   21,
+       21,   21,   21,   21,   14,   15,   23,   22,    6,    2,
+        1,    0,   21,   21,   21,   21,   21,   21,   21,   21,
+        2,    0,   21,    7,   21,   13,   21,   10,    8,    0,
+       21,   21,   21,   19,   11,   21,   21,    9,   12,    0
     } ;
 
 static yyconst flex_int32_t yy_ec[256] =
@@ -395,7 +395,7 @@ static yyconst flex_int32_t yy_ec[256] =
 
        26,   27,   24,   24,   28,   24,   24,   29,   24,   30,
        31,   24,   24,   32,   24,   33,   34,   35,   24,   36,
-       24,   24,   37,    1,   38,    1,    1,    1,    1,    1,
+       37,   24,   38,    1,   39,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -412,66 +412,70 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst flex_int32_t yy_meta[39] =
+static yyconst flex_int32_t yy_meta[40] =
     {   0,
         1,    1,    2,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    3,    1,    1,    1,    1,    1,    1,    1,
         1,    3,    3,    3,    3,    3,    3,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    1,    1
+        3,    3,    3,    3,    3,    3,    3,    1,    1
     } ;
 
-static yyconst flex_int16_t yy_base[58] =
+static yyconst flex_int16_t yy_base[63] =
     {   0,
-        0,    0,   77,   78,   37,   39,    0,   78,   78,   78,
-       78,   78,   61,   32,   78,   57,   78,   78,    0,   18,
-       16,   44,   51,   78,   78,   45,    0,   78,   59,   40,
-       52,    0,   43,   35,   43,   34,   33,   33,   51,   47,
-        0,   39,    0,   35,    0,    0,   43,   30,   26,   78,
-       31,   25,    0,    0,   78,   53,   47
+        0,    0,   82,   83,   38,   40,    0,   83,   83,   83,
+       83,   83,   66,   33,   83,   62,   83,   83,   47,    0,
+       19,   17,   48,   55,   83,   83,   46,    0,   83,   63,
+       41,   56,    0,   42,   46,   38,   46,   37,   36,   36,
+       54,   50,   43,    0,   41,    0,   37,    0,    0,   45,
+       24,   31,   27,   83,    0,   32,   26,    0,    0,   83,
+       54,   48
     } ;
 
-static yyconst flex_int16_t yy_def[58] =
+static yyconst flex_int16_t yy_def[63] =
     {   0,
-       55,    1,   55,   55,   55,   55,   56,   55,   55,   55,
-       55,   55,   55,   55,   55,   55,   55,   55,   57,   57,
-       57,   57,   57,   55,   55,   55,   56,   55,   55,   55,
-       55,   57,   57,   57,   57,   57,   57,   57,   55,   55,
-       57,   57,   57,   57,   57,   57,   55,   57,   57,   55,
-       57,   57,   57,   57,    0,   55,   55
+       60,    1,   60,   60,   60,   60,   61,   60,   60,   60,
+       60,   60,   60,   60,   60,   60,   60,   60,   62,   62,
+       62,   62,   62,   62,   60,   60,   60,   61,   60,   60,
+       60,   60,   62,   62,   62,   62,   62,   62,   62,   62,
+       60,   60,   62,   62,   62,   62,   62,   62,   62,   60,
+       62,   62,   62,   60,   62,   62,   62,   62,   62,    0,
+       60,   60
     } ;
 
-static yyconst flex_int16_t yy_nxt[117] =
+static yyconst flex_int16_t yy_nxt[123] =
     {   0,
         4,    5,    6,    7,    8,    9,   10,   11,   12,   13,
         4,   11,   14,   15,    4,    4,    4,    4,   16,   17,
-       18,   19,   19,   19,   20,   21,   19,   22,   19,   19,
-       19,   19,   19,   19,   23,   19,   24,   25,   26,   26,
-       26,   26,   29,   33,   30,   35,   26,   26,   34,   32,
-       29,   36,   30,   27,   54,   27,   53,   52,   51,   50,
-       49,   48,   47,   39,   46,   45,   44,   43,   42,   41,
-       40,   39,   38,   37,   31,   28,   55,    3,   55,   55,
-       55,   55,   55,   55,   55,   55,   55,   55,   55,   55,
-       55,   55,   55,   55,   55,   55,   55,   55,   55,   55,
+       18,   19,   20,   20,   21,   22,   20,   23,   20,   20,
+       20,   20,   20,   20,   24,   20,   20,   25,   26,   27,
+       27,   27,   27,   30,   35,   31,   37,   27,   27,   36,
+       33,   30,   38,   31,   28,   59,   28,   58,   57,   56,
+       55,   54,   53,   52,   51,   50,   41,   49,   48,   47,
+       46,   45,   44,   43,   42,   41,   40,   39,   34,   32,
+       29,   60,    3,   60,   60,   60,   60,   60,   60,   60,
+       60,   60,   60,   60,   60,   60,   60,   60,   60,   60,
 
-       55,   55,   55,   55,   55,   55,   55,   55,   55,   55,
-       55,   55,   55,   55,   55,   55
+       60,   60,   60,   60,   60,   60,   60,   60,   60,   60,
+       60,   60,   60,   60,   60,   60,   60,   60,   60,   60,
+       60,   60
     } ;
 
-static yyconst flex_int16_t yy_chk[117] =
+static yyconst flex_int16_t yy_chk[123] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    5,    5,
-        6,    6,   14,   20,   14,   21,   26,   26,   20,   57,
-       30,   21,   30,   56,   52,   56,   51,   49,   48,   47,
-       44,   42,   40,   39,   38,   37,   36,   35,   34,   33,
-       31,   29,   23,   22,   16,   13,    3,   55,   55,   55,
-       55,   55,   55,   55,   55,   55,   55,   55,   55,   55,
-       55,   55,   55,   55,   55,   55,   55,   55,   55,   55,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    5,
+        5,    6,    6,   14,   21,   14,   22,   27,   27,   21,
+       62,   31,   22,   31,   61,   57,   61,   56,   53,   52,
+       51,   50,   47,   45,   43,   42,   41,   40,   39,   38,
+       37,   36,   35,   34,   32,   30,   24,   23,   19,   16,
+       13,    3,   60,   60,   60,   60,   60,   60,   60,   60,
+       60,   60,   60,   60,   60,   60,   60,   60,   60,   60,
 
-       55,   55,   55,   55,   55,   55,   55,   55,   55,   55,
-       55,   55,   55,   55,   55,   55
+       60,   60,   60,   60,   60,   60,   60,   60,   60,   60,
+       60,   60,   60,   60,   60,   60,   60,   60,   60,   60,
+       60,   60
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -506,7 +510,7 @@ extern "C" void yyerror (const char *error) { std::cerr << error << std::endl; }
 #define SAVE_TOKEN yylval.string = new std::string(yytext, yyleng)
 #define TOKEN(t) (yylval.token = t)
 
-#line 510 "/Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp"
+#line 514 "/Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp"
 
 #define INITIAL 0
 
@@ -691,7 +695,7 @@ YY_DECL
 #line 24 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
 
 
-#line 695 "/Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp"
+#line 699 "/Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp"
 
 	if ( !(yy_init) )
 		{
@@ -744,13 +748,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 56 )
+				if ( yy_current_state >= 61 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 78 );
+		while ( yy_base[yy_current_state] != 83 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -848,92 +852,99 @@ case 11:
 YY_RULE_SETUP
 #line 67 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
 {
-  SAVE_TOKEN; return TEXTERN;
+  SAVE_TOKEN; return TWARRAY;
 }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
 #line 71 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
 {
-  SAVE_TOKEN; return TEND;
+  SAVE_TOKEN; return TEXTERN;
 }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
 #line 75 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
 {
-  SAVE_TOKEN; return TOPENBRACE;
+  SAVE_TOKEN; return TEND;
 }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
 #line 79 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
 {
-  SAVE_TOKEN; return TCLOSEBRACE;
+  SAVE_TOKEN; return TOPENBRACE;
 }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
 #line 83 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
 {
-  SAVE_TOKEN; return TOPENBRACKET;
+  SAVE_TOKEN; return TCLOSEBRACE;
 }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
 #line 87 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
 {
-  SAVE_TOKEN; return TCLOSEBRACKET;
+  SAVE_TOKEN; return TOPENBRACKET;
 }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
 #line 91 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
 {
-  SAVE_TOKEN; return TSTAR;
+  SAVE_TOKEN; return TCLOSEBRACKET;
 }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
 #line 95 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
 {
-  SAVE_TOKEN; return TBINOP;
-} 
+  SAVE_TOKEN; return TSTAR;
+}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
 #line 99 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
 {
-  SAVE_TOKEN; return TEQUALS;
-}
+  SAVE_TOKEN; return TBINOP;
+} 
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
 #line 103 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
-SAVE_TOKEN; return TIDENTIFIER; // printf( "An identifier: %s\n", yytext );
+{
+  SAVE_TOKEN; return TEQUALS;
+}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 105 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
-{/* one-line comment */}
+#line 107 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
+SAVE_TOKEN; return TIDENTIFIER; // printf( "An identifier: %s\n", yytext );
 	YY_BREAK
 case 22:
-/* rule 22 can match eol */
-YY_RULE_SETUP
-#line 107 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
-/* eat up whitespace */
-	YY_BREAK
-case 23:
 YY_RULE_SETUP
 #line 109 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
-printf( "Unrecognized character: %s\n", yytext );
+{/* one-line comment */}
+	YY_BREAK
+case 23:
+/* rule 23 can match eol */
+YY_RULE_SETUP
+#line 111 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
+/* eat up whitespace */
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 111 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
+#line 113 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
+printf( "Unrecognized character: %s\n", yytext );
+	YY_BREAK
+case 25:
+YY_RULE_SETUP
+#line 115 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
 ECHO;
 	YY_BREAK
-#line 937 "/Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp"
+#line 948 "/Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1225,7 +1236,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 56 )
+			if ( yy_current_state >= 61 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1253,11 +1264,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 56 )
+		if ( yy_current_state >= 61 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 55);
+	yy_is_jam = (yy_current_state == 60);
 
 	return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1930,7 +1941,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 111 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
+#line 115 "/Users/zoe/Developer/hive/hive/lexer/tokens.l"
 
 
 

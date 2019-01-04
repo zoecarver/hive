@@ -10,7 +10,6 @@
 using namespace llvm;
 
 Value* FunctionAST::codeGen() {
-	Type* returnType = IntegerType::get(mContext, 32);
 	std::vector<Type*> argTypes;
 	for(auto& e : args)
 		argTypes.push_back(e.second);

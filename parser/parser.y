@@ -50,7 +50,7 @@ BlockAST *res;
     llvm::Type *type;
 }
 
-%token <string> TIDENTIFIER TINT TBINOP TOPENPAREN TCLOSEPAREN TOPENBRACE TCLOSEBRACE TFUNC TVAR TCAST TWDOUBLE TWINT TEQUALS TEXTERN TAND TOPENBRACKET TCLOSEBRACKET TSTAR TEND TCOLON TCOMMA
+%token <string> TIDENTIFIER TINT TBINOP TOPENPAREN TCLOSEPAREN TOPENBRACE TCLOSEBRACE TFUNC TVAR TCAST TWDOUBLE TWINT TEQUALS TEXTERN TAND TOPENBRACKET TCLOSEBRACKET TSTAR TEND TCOLON TCOMMA TWARRAY
 %token <args> arg
 
 %type <any> constExpr func var cast extern call array varArray
@@ -98,8 +98,8 @@ BlockAST *res;
     | {
         $$ = 0;
     }
-    varArray    : TIDENTIFIER TEQUALS TOPENBRACKET arrayValues TCLOSEBRACKET {
-        $$ = new ArrayAST(*$<string>1, *$<valueArgs>4);
+    varArray    : TOPENBRACKET arrayValues TCLOSEBRACKET {
+        $$ = new ArrayAST(*$<valueArgs>2);
     }
           ;
     arrayValues : constExpr {
@@ -169,6 +169,7 @@ BlockAST *res;
           ;
     type        : TWDOUBLE { $$ = dType; }
     | TWINT { $$ = i32; }
+    | TWARRAY { $$ = pi8; }
     | type TSTAR { $$ = PointerType::getUnqual($<type>1); }
           ;
     extern      : TEXTERN TIDENTIFIER TOPENPAREN typeArgs TCLOSEPAREN returnType {

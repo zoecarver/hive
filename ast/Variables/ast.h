@@ -69,13 +69,11 @@ public:
 };
 
 class ArrayAST : public AST {
-	std::string name;
 	std::vector<AST*> values;
 
 public:
-	ArrayAST(std::string name, std::vector<AST*> values)
-		: name(name)
-		, values(values) {}
+	ArrayAST(std::vector<AST*> values)
+		: values(values) {}
 	Value* codeGen() override;
 	std::string out() override;
 };

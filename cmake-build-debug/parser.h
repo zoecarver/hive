@@ -79,7 +79,8 @@ extern int yydebug;
     TEND = 276,
     TCOLON = 277,
     TCOMMA = 278,
-    arg = 279
+    TWARRAY = 279,
+    arg = 280
   };
 #endif
 /* Tokens.  */
@@ -104,7 +105,8 @@ extern int yydebug;
 #define TEND 276
 #define TCOLON 277
 #define TCOMMA 278
-#define arg 279
+#define TWARRAY 279
+#define arg 280
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -124,7 +126,7 @@ union YYSTYPE
     std::vector<AST *> *valueArgs;
     llvm::Type *type;
 
-#line 128 "parser.h" /* yacc.c:1916  */
+#line 130 "parser.h" /* yacc.c:1916  */
 };
 
 typedef union YYSTYPE YYSTYPE;

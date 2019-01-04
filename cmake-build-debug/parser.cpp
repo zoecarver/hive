@@ -159,7 +159,8 @@ extern int yydebug;
     TEND = 276,
     TCOLON = 277,
     TCOMMA = 278,
-    arg = 279
+    TWARRAY = 279,
+    arg = 280
   };
 #endif
 /* Tokens.  */
@@ -184,7 +185,8 @@ extern int yydebug;
 #define TEND 276
 #define TCOLON 277
 #define TCOMMA 278
-#define arg 279
+#define TWARRAY 279
+#define arg 280
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -204,7 +206,7 @@ union YYSTYPE
     std::vector<AST *> *valueArgs;
     llvm::Type *type;
 
-#line 208 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:355  */
+#line 210 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -221,7 +223,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 225 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:358  */
+#line 227 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -461,23 +463,23 @@ union yyalloc
 #endif /* !YYCOPY_NEEDED */
 
 /* YYFINAL -- State number of the termination state.  */
-#define YYFINAL  24
+#define YYFINAL  27
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   93
+#define YYLAST   95
 
 /* YYNTOKENS -- Number of terminals.  */
-#define YYNTOKENS  25
+#define YYNTOKENS  26
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  20
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  46
+#define YYNRULES  47
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  72
+#define YYNSTATES  73
 
 /* YYTRANSLATE[YYX] -- Symbol number corresponding to YYX as returned
    by yylex, with out-of-bounds checking.  */
 #define YYUNDEFTOK  2
-#define YYMAXUTOK   279
+#define YYMAXUTOK   280
 
 #define YYTRANSLATE(YYX)                                                \
   ((unsigned int) (YYX) <= YYMAXUTOK ? yytranslate[YYX] : YYUNDEFTOK)
@@ -513,7 +515,8 @@ static const yytype_uint8 yytranslate[] =
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     1,     2,     3,     4,
        5,     6,     7,     8,     9,    10,    11,    12,    13,    14,
-      15,    16,    17,    18,    19,    20,    21,    22,    23,    24
+      15,    16,    17,    18,    19,    20,    21,    22,    23,    24,
+      25
 };
 
 #if YYDEBUG
@@ -524,7 +527,7 @@ static const yytype_uint8 yyrline[] =
       77,    78,    79,    80,    81,    82,    85,    86,    87,    88,
       89,    91,    95,    98,   101,   105,   110,   115,   119,   123,
      127,   130,   134,   137,   140,   144,   148,   152,   156,   161,
-     165,   166,   168,   170,   171,   172,   174
+     165,   166,   168,   170,   171,   172,   173,   175
 };
 #endif
 
@@ -537,10 +540,10 @@ static const char *const yytname[] =
   "TOPENPAREN", "TCLOSEPAREN", "TOPENBRACE", "TCLOSEBRACE", "TFUNC",
   "TVAR", "TCAST", "TWDOUBLE", "TWINT", "TEQUALS", "TEXTERN", "TAND",
   "TOPENBRACKET", "TCLOSEBRACKET", "TSTAR", "TEND", "TCOLON", "TCOMMA",
-  "arg", "$accept", "program", "statments", "constExpr", "var", "varType",
-  "varArray", "arrayValues", "array", "call", "func", "returnType",
-  "optionalArgParens", "funcArgs", "typeArgs", "valueArgs", "seperator",
-  "cast", "type", "extern", YY_NULLPTR
+  "TWARRAY", "arg", "$accept", "program", "statments", "constExpr", "var",
+  "varType", "varArray", "arrayValues", "array", "call", "func",
+  "returnType", "optionalArgParens", "funcArgs", "typeArgs", "valueArgs",
+  "seperator", "cast", "type", "extern", YY_NULLPTR
 };
 #endif
 
@@ -551,14 +554,14 @@ static const yytype_uint16 yytoknum[] =
 {
        0,   256,   257,   258,   259,   260,   261,   262,   263,   264,
      265,   266,   267,   268,   269,   270,   271,   272,   273,   274,
-     275,   276,   277,   278,   279
+     275,   276,   277,   278,   279,   280
 };
 # endif
 
-#define YYPACT_NINF -15
+#define YYPACT_NINF -16
 
 #define yypact_value_is_default(Yystate) \
-  (!!((Yystate) == (-15)))
+  (!!((Yystate) == (-16)))
 
 #define YYTABLE_NINF -42
 
@@ -569,14 +572,14 @@ static const yytype_uint16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-      28,    65,   -15,    63,    13,    18,     2,    33,    41,   -15,
-     -15,   -15,   -15,   -15,   -15,   -15,    63,    34,    47,   -15,
-      63,    22,    29,    46,   -15,    41,    63,    63,    41,    -4,
-     -15,   -15,    39,    63,     6,    35,   -15,   -15,    50,    61,
-     -15,    41,    41,   -15,    63,   -15,    41,   -14,    34,   -15,
-     -15,    -1,    34,    63,   -15,    34,    74,    41,   -15,    63,
-      38,   -15,    39,     4,    -2,    50,    39,    41,   -15,   -15,
-     -15,   -15
+       7,    63,   -16,    50,    -2,    17,    50,    24,    29,    10,
+     -16,   -16,   -16,   -16,   -16,   -16,   -16,    50,    71,    50,
+     -16,    50,    44,    25,    28,    10,    67,   -16,    10,    50,
+      50,    10,    -1,   -16,   -16,   -16,    16,    52,    54,   -16,
+     -16,    31,    69,   -16,   -16,    50,    10,    10,   -16,    50,
+     -16,    71,   -16,   -16,     5,    71,    50,   -16,    71,    -5,
+      10,    10,    41,   -16,    16,    34,     1,    31,    16,   -16,
+     -16,   -16,   -16
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -584,28 +587,28 @@ static const yytype_int8 yypact[] =
      means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-      20,    12,     6,    20,     0,     0,     0,    20,     4,     8,
-      19,    13,    11,     7,     9,    10,    20,     0,    20,    17,
-      20,     0,    34,     0,     1,     5,    20,    16,    38,     0,
-      43,    44,    42,    20,    23,     0,    18,    34,    31,    33,
-      36,    14,    15,    28,    20,    45,    25,     0,     0,    21,
-      27,    41,     0,    20,    40,     0,     0,    39,    24,    20,
-       0,    32,    30,    20,     0,    31,    37,    26,    22,    29,
-      35,    46
+      20,    12,     6,    20,     0,     0,    20,     0,    20,     4,
+       8,    19,    13,    11,     7,     9,    10,    20,     0,    20,
+      17,    20,     0,    34,     0,    25,     0,     1,     5,    20,
+      16,    38,     0,    43,    44,    45,    42,    23,     0,    18,
+      34,    31,    33,    36,    24,    20,    14,    15,    28,    20,
+      46,     0,    21,    27,    41,     0,    20,    40,     0,     0,
+      26,    39,     0,    32,    30,    20,     0,    31,    37,    22,
+      29,    35,    47
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-     -15,   -15,    11,    -3,   -15,   -15,   -15,   -15,   -15,   -15,
-     -15,     3,   -15,    49,   -15,   -15,   -15,   -15,    37,   -15
+     -16,   -16,   -15,    -3,   -16,   -16,   -16,   -16,   -16,   -16,
+     -16,     9,   -16,    37,   -16,   -16,   -16,   -16,    12,   -16
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int8 yydefgoto[] =
 {
-      -1,     6,     7,     8,     9,    49,    10,    47,    11,    12,
-      13,    53,    38,    39,    56,    29,    55,    14,    32,    15
+      -1,     7,     8,     9,    10,    52,    11,    26,    12,    13,
+      14,    56,    41,    42,    59,    32,    58,    15,    36,    16
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -613,54 +616,54 @@ static const yytype_int8 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_int8 yytable[] =
 {
-      21,    70,    24,    43,    25,    58,    61,     1,     2,    59,
-       3,    26,    48,    28,     4,    34,    22,    35,    45,    44,
-       5,    23,    54,    41,    42,    69,    27,    26,    -2,    36,
-      46,     1,     2,    -3,     3,    37,     1,     2,     4,     3,
-      26,    57,    27,     4,     5,    68,    26,    30,    31,     5,
-       1,     2,    40,     3,    50,    27,    67,     4,    45,    45,
-      25,    27,    52,     5,    63,    33,     1,     2,    71,     3,
-       0,    16,     0,     4,   -41,   -41,     0,    17,     0,     5,
-      18,    65,    19,    20,    54,    60,    51,    30,    31,    62,
-       0,     0,    64,    66
+      22,    23,    67,    25,    71,    28,    48,    -2,    33,    34,
+       1,     2,    63,     3,    31,    29,    37,     4,    38,    35,
+      24,    50,    49,     5,    27,     6,    46,    47,    57,    -3,
+      30,    40,     1,     2,    43,     3,    50,     1,     2,     4,
+       3,    65,    60,    55,     4,     5,    61,     6,    69,    29,
+       5,    39,     6,     1,     2,    70,     3,    29,    51,    29,
+       4,    50,    28,    62,    30,     0,     5,    64,     6,    17,
+      66,    68,    30,    53,    30,    18,    72,    54,    19,     0,
+      20,    21,   -41,   -41,    33,    34,    44,     0,     0,     0,
+      45,     0,    57,   -41,     0,    35
 };
 
 static const yytype_int8 yycheck[] =
 {
-       3,     3,     0,     7,     7,    19,     7,     3,     4,    23,
-       6,     5,     6,    16,    10,    18,     3,    20,    20,    23,
-      16,     3,    23,    26,    27,    21,    20,     5,     0,     7,
-      33,     3,     4,     0,     6,     6,     3,     4,    10,     6,
-       5,    44,    20,    10,    16,     7,     5,    13,    14,    16,
-       3,     4,     6,     6,    19,    20,    59,    10,    20,    20,
-      63,    20,    12,    16,    53,    18,     3,     4,    65,     6,
-      -1,     6,    -1,    10,    13,    14,    -1,    12,    -1,    16,
-      15,     7,    17,    18,    23,    48,    37,    13,    14,    52,
-      -1,    -1,    55,    56
+       3,     3,     7,     6,     3,     8,     7,     0,    13,    14,
+       3,     4,     7,     6,    17,     5,    19,    10,    21,    24,
+       3,    20,    23,    16,     0,    18,    29,    30,    23,     0,
+      20,     6,     3,     4,     6,     6,    20,     3,     4,    10,
+       6,    56,    45,    12,    10,    16,    49,    18,     7,     5,
+      16,     7,    18,     3,     4,    21,     6,     5,     6,     5,
+      10,    20,    65,    51,    20,    -1,    16,    55,    18,     6,
+      58,    59,    20,    19,    20,    12,    67,    40,    15,    -1,
+      17,    18,    13,    14,    13,    14,    19,    -1,    -1,    -1,
+      23,    -1,    23,    24,    -1,    24
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
      symbol of state STATE-NUM.  */
 static const yytype_uint8 yystos[] =
 {
-       0,     3,     4,     6,    10,    16,    26,    27,    28,    29,
-      31,    33,    34,    35,    42,    44,     6,    12,    15,    17,
-      18,    28,     3,     3,     0,    28,     5,    20,    28,    40,
-      13,    14,    43,    18,    28,    28,     7,     6,    37,    38,
-       6,    28,    28,     7,    23,    20,    28,    32,     6,    30,
-      19,    38,    12,    36,    23,    41,    39,    28,    19,    23,
-      43,     7,    43,    27,    43,     7,    43,    28,     7,    21,
-       3,    36
+       0,     3,     4,     6,    10,    16,    18,    27,    28,    29,
+      30,    32,    34,    35,    36,    43,    45,     6,    12,    15,
+      17,    18,    29,     3,     3,    29,    33,     0,    29,     5,
+      20,    29,    41,    13,    14,    24,    44,    29,    29,     7,
+       6,    38,    39,     6,    19,    23,    29,    29,     7,    23,
+      20,     6,    31,    19,    39,    12,    37,    23,    42,    40,
+      29,    29,    44,     7,    44,    28,    44,     7,    44,     7,
+      21,     3,    37
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
-       0,    25,    26,    26,    27,    27,    28,    28,    28,    28,
-      28,    28,    28,    28,    28,    28,    28,    28,    28,    28,
-      28,    29,    30,    30,    31,    32,    32,    33,    34,    35,
-      36,    36,    37,    37,    38,    38,    39,    39,    40,    40,
-      41,    41,    42,    43,    43,    43,    44
+       0,    26,    27,    27,    28,    28,    29,    29,    29,    29,
+      29,    29,    29,    29,    29,    29,    29,    29,    29,    29,
+      29,    30,    31,    31,    32,    33,    33,    34,    35,    36,
+      37,    37,    38,    38,    39,    39,    40,    40,    41,    41,
+      42,    42,    43,    44,    44,    44,    44,    45
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
@@ -668,9 +671,9 @@ static const yytype_uint8 yyr2[] =
 {
        0,     2,     0,     1,     1,     2,     1,     1,     1,     1,
        1,     1,     1,     1,     3,     3,     2,     2,     3,     1,
-       0,     4,     3,     0,     5,     1,     3,     4,     4,     6,
+       0,     4,     3,     0,     3,     1,     3,     4,     4,     6,
        2,     0,     3,     1,     0,     4,     0,     2,     1,     3,
-       1,     0,     3,     1,     1,     2,     6
+       1,     0,     3,     1,     1,     1,     2,     6
 };
 
 
@@ -1350,115 +1353,115 @@ yyreduce:
         case 2:
 #line 67 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { res = new BlockAST(); }
-#line 1354 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1357 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 3:
 #line 68 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { res = (yyvsp[0].base); }
-#line 1360 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1363 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 4:
 #line 70 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.base) = new BlockAST(); (yyval.base)->statements.push_back((yyvsp[0].any)); }
-#line 1366 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1369 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 5:
 #line 71 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyvsp[-1].base)->statements.push_back((yyvsp[0].any)); }
-#line 1372 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1375 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 6:
 #line 73 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = new NumberAST(std::stoi(*(yyvsp[0].string))); }
-#line 1378 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1381 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 7:
 #line 74 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = (yyvsp[0].any); }
-#line 1384 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1387 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 8:
 #line 75 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = (yyvsp[0].any); }
-#line 1390 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1393 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 9:
 #line 76 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = (yyvsp[0].any); }
-#line 1396 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1399 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 10:
 #line 77 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = (yyvsp[0].any); }
-#line 1402 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1405 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 11:
 #line 78 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = (yyvsp[0].any); }
-#line 1408 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1411 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 12:
 #line 79 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = new VariableGetAST(*(yyvsp[0].string)); }
-#line 1414 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1417 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 13:
 #line 80 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = (yyvsp[0].any); }
-#line 1420 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1423 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 14:
 #line 81 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = new BinOpAST((yyvsp[-2].any), (yyvsp[0].any), (yyvsp[-1].string)->c_str()[0]); }
-#line 1426 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1429 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 15:
 #line 82 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = new BinOpAST((yyvsp[-2].any), (yyvsp[0].any), (yyvsp[-1].string)->c_str()[0]); }
-#line 1432 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1435 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 16:
 #line 85 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = new LoadVariableAST((yyvsp[-1].any)); }
-#line 1438 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1441 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 17:
 #line 86 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = new VariableGetAST(*(yyvsp[-1].string), true); }
-#line 1444 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1447 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 18:
 #line 87 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = (yyvsp[-1].any); }
-#line 1450 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1453 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 19:
 #line 88 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = (yyvsp[0].any); }
-#line 1456 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1459 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 20:
 #line 89 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = 0; }
-#line 1462 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1465 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 21:
@@ -1466,7 +1469,7 @@ yyreduce:
     {
         (yyval.any) = new VariableAST(*(yyvsp[-3].string), (yyvsp[-1].any), (yyvsp[0].type));
     }
-#line 1470 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1473 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 22:
@@ -1474,7 +1477,7 @@ yyreduce:
     {
         (yyval.type) = (yyvsp[-1].type);
     }
-#line 1478 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1481 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 23:
@@ -1482,15 +1485,15 @@ yyreduce:
     {
         (yyval.type) = 0;
     }
-#line 1486 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1489 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 24:
 #line 101 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     {
-        (yyval.any) = new ArrayAST(*(yyvsp[-4].string), *(yyvsp[-1].valueArgs));
+        (yyval.any) = new ArrayAST(*(yyvsp[-1].valueArgs));
     }
-#line 1494 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1497 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 25:
@@ -1500,7 +1503,7 @@ yyreduce:
         if ((yyvsp[0].any)) tmpValues->push_back((yyvsp[0].any));
         (yyval.valueArgs) = tmpValues;
     }
-#line 1504 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1507 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 26:
@@ -1508,7 +1511,7 @@ yyreduce:
     {
         (yyvsp[-2].valueArgs)->push_back((yyvsp[0].any));
     }
-#line 1512 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1515 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 27:
@@ -1516,7 +1519,7 @@ yyreduce:
     {
         (yyval.any) = new ArrayGetAST(*(yyvsp[-3].string), (yyvsp[-1].any));
     }
-#line 1520 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1523 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 28:
@@ -1524,7 +1527,7 @@ yyreduce:
     {
         (yyval.any) = new CallAST(*(yyvsp[-3].string), *(yyvsp[-1].valueArgs));
     }
-#line 1528 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1531 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 29:
@@ -1532,7 +1535,7 @@ yyreduce:
     {
         (yyval.any) = new FunctionAST(*(yyvsp[-4].string), *(yyvsp[-3].args), (yyvsp[-1].base), (yyvsp[-2].type));
     }
-#line 1536 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1539 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 30:
@@ -1540,7 +1543,7 @@ yyreduce:
     {
         (yyval.type) = (yyvsp[0].type);
     }
-#line 1544 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1547 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 31:
@@ -1548,7 +1551,7 @@ yyreduce:
     {
         (yyval.type) = i8;
     }
-#line 1552 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1555 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 32:
@@ -1556,7 +1559,7 @@ yyreduce:
     {
         (yyval.args) = (yyvsp[-1].args);
     }
-#line 1560 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1563 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 33:
@@ -1564,7 +1567,7 @@ yyreduce:
     {
         (yyval.args) = (yyvsp[0].args);
     }
-#line 1568 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1571 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 34:
@@ -1573,7 +1576,7 @@ yyreduce:
         auto tmpArgs = std::vector<std::pair<std::string, llvm::Type *>>();
         (yyval.args) = &tmpArgs;
     }
-#line 1577 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1580 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 35:
@@ -1581,7 +1584,7 @@ yyreduce:
     {
         (yyvsp[-3].args)->push_back(std::make_pair(*(yyvsp[0].string), (yyvsp[-1].type)));
     }
-#line 1585 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1588 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 36:
@@ -1590,7 +1593,7 @@ yyreduce:
         auto tmpArgs = std::vector<Type *>();
         (yyval.typeArgs) = &tmpArgs;
     }
-#line 1594 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1597 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 37:
@@ -1598,7 +1601,7 @@ yyreduce:
     {
         (yyvsp[-1].typeArgs)->push_back((yyvsp[0].type));
     }
-#line 1602 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1605 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 38:
@@ -1608,7 +1611,7 @@ yyreduce:
         if ((yyvsp[0].any)) tmpArgs->push_back((yyvsp[0].any));
         (yyval.valueArgs) = tmpArgs;
     }
-#line 1612 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1615 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 39:
@@ -1616,55 +1619,61 @@ yyreduce:
     {
         (yyvsp[-2].valueArgs)->push_back((yyvsp[0].any));
     }
-#line 1620 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1623 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 40:
 #line 165 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1626 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1629 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 41:
 #line 166 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { }
-#line 1632 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1635 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 42:
 #line 168 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.any) = new CastAST(*(yyvsp[-2].string), (yyvsp[0].type)); }
-#line 1638 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1641 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 43:
 #line 170 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.type) = dType; }
-#line 1644 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1647 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 44:
 #line 171 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     { (yyval.type) = i32; }
-#line 1650 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1653 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 45:
 #line 172 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
-    { (yyval.type) = PointerType::getUnqual((yyvsp[-1].type)); }
-#line 1656 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+    { (yyval.type) = pi8; }
+#line 1659 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
   case 46:
-#line 174 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
+#line 173 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
+    { (yyval.type) = PointerType::getUnqual((yyvsp[-1].type)); }
+#line 1665 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+    break;
+
+  case 47:
+#line 175 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1663  */
     {
         (yyval.any) = new PrototypeAST(*(yyvsp[-4].string), *(yyvsp[-2].typeArgs), (yyvsp[0].type));
     }
-#line 1664 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1673 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
     break;
 
 
-#line 1668 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
+#line 1677 "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" /* yacc.c:1663  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1892,5 +1901,5 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 178 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1907  */
+#line 179 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1907  */
 
