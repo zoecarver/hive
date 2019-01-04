@@ -19,21 +19,21 @@ entry:
   %5 = getelementptr i32, i32* %2, i32 0
   store i32 0, i32* %5
   %6 = bitcast i8* %0 to i32*
-  %7 = getelementptr i32, i32* %6, i32 4
-  store i32 2, i32* %7
-  %8 = getelementptr i32, i32* %2, i32 4
-  store i32 4, i32* %8
+  %7 = getelementptr i32, i32* %6, i32 1
+  store i32 2000, i32* %7
+  %8 = getelementptr i32, i32* %2, i32 1
+  store i32 1, i32* %8
   %9 = bitcast i8* %0 to i32*
-  %10 = getelementptr i32, i32* %9, i32 8
+  %10 = getelementptr i32, i32* %9, i32 2
   store i32 3, i32* %10
-  %11 = getelementptr i32, i32* %2, i32 8
-  store i32 8, i32* %11
+  %11 = getelementptr i32, i32* %2, i32 2
+  store i32 2, i32* %11
   store i8* %0, i8** %b
   store i32* %2, i32** %sizes_arr
   %12 = load i8*, i8** %b
   %13 = load i32*, i32** %sizes_arr
   %14 = bitcast i8* %12 to i32*
-  %15 = getelementptr i32, i32* %13, i32 0
+  %15 = getelementptr i32, i32* %13, i32 1
   %16 = load i32, i32* %15
   %17 = getelementptr i32, i32* %14, i32 %16
   %18 = load i32, i32* %17

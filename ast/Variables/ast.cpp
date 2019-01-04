@@ -126,17 +126,17 @@ Value* ArrayAST::codeGen() {
 		mBuilder.Insert(castInst); // TODO is this nessisary
 
 		auto typeSize = v->getType()->getPrimitiveSizeInBits() / 8;
-		auto* index = ConstantInt::get(mContext, APInt(32, currentSize));
+		auto* index = ConstantInt::get(mContext, APInt(32, currentSize / 4)); // /4 because that is the size of an int32 in bytes
 		auto* element = mBuilder.CreateGEP(castInst, index);
 
 		mBuilder.CreateStore(v, element);
 
 		// update the sizes array accordingly
 		auto* sizesIndex =
-			ConstantInt::get(mContext, APInt(32, count * 4)); // *4 because 4 is the number of bytes in 32 bit array
+			ConstantInt::get(mContext, APInt(32, count));
 		auto* sizesElement = mBuilder.CreateGEP(sizesArray, sizesIndex);
 
-		auto* sizeValue = ConstantInt::get(mContext, APInt(32, currentSize)); // * count or current index
+		auto* sizeValue = ConstantInt::get(mContext, APInt(32, currentSize / 4)); // * count or current index
 		mBuilder.CreateStore(sizeValue, sizesElement);
 
 		currentSize += typeSize;

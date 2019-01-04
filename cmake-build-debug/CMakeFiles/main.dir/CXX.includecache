@@ -6,9 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/Users/zoe/Developer/hive/hive/ast/Functions/ast.h
+/Users/zoe/Developer/hive/hive/ast/Variables/ast.cpp
+iostream
+-
+type_traits
+-
+../../globals.h
+/Users/zoe/Developer/hive/hive/globals.h
+ast.h
+/Users/zoe/Developer/hive/hive/ast/Variables/ast.h
+llvm/IR/Constants.h
+/Users/zoe/Developer/hive/hive/ast/Variables/llvm/IR/Constants.h
+llvm/IR/Instructions.h
+/Users/zoe/Developer/hive/hive/ast/Variables/llvm/IR/Instructions.h
+llvm/Support/raw_ostream.h
+/Users/zoe/Developer/hive/hive/ast/Variables/llvm/Support/raw_ostream.h
+
+/Users/zoe/Developer/hive/hive/ast/Variables/ast.h
 llvm/IR/Value.h
-/Users/zoe/Developer/hive/hive/ast/Functions/llvm/IR/Value.h
+/Users/zoe/Developer/hive/hive/ast/Variables/llvm/IR/Value.h
 ../ast.h
 /Users/zoe/Developer/hive/hive/ast/ast.h
 
@@ -29,22 +45,4 @@ llvm/IR/LLVMContext.h
 /Users/zoe/Developer/hive/hive/llvm/IR/LLVMContext.h
 llvm/IR/Value.h
 /Users/zoe/Developer/hive/hive/llvm/IR/Value.h
-
-/Users/zoe/Developer/hive/hive/main.cpp
-main.h
-/Users/zoe/Developer/hive/hive/main.h
-ast/Functions/ast.h
-/Users/zoe/Developer/hive/hive/ast/Functions/ast.h
-ast/ast.h
-/Users/zoe/Developer/hive/hive/ast/ast.h
-globals.h
-/Users/zoe/Developer/hive/hive/globals.h
-iostream
--
-fstream
--
-utility
--
-
-/Users/zoe/Developer/hive/hive/main.h
 
