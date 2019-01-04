@@ -4,6 +4,7 @@
 #include "globals.h"
 
 #include <iostream>
+#include <fstream>
 #include <utility>
 
 extern FILE* yyin;
@@ -37,5 +38,11 @@ int main(int argc, char** argv) {
 
 	zzparse(); // set arc so that we can use it to free memory after variables have been created
 	yyparse();
-	std::cout << externMalloc() << externFree() << res->out() << std::endl;
+
+	auto output = externMalloc() + externFree() + res->out();
+
+	std::cout << output << std::endl;
+	std::ofstream outputFile;
+	outputFile.open(argv[2]);
+	outputFile << output;
 }
