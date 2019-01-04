@@ -31,20 +31,20 @@
    version 2.2 of Bison.  */
 
 #ifndef YY_ZZ_PREPARSER_H_INCLUDED
-# define YY_ZZ_PREPARSER_H_INCLUDED
+#define YY_ZZ_PREPARSER_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
-# define YYDEBUG 0
+#	define YYDEBUG 0
 #endif
 #if YYDEBUG
 extern int zzdebug;
 #endif
 /* "%code requires" blocks.  */
 #line 1 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1916  */
- 
-#include "../ast/Number/ast.h"
+
 #include "../ast/BinOp/ast.h"
 #include "../ast/Functions/ast.h"
+#include "../ast/Number/ast.h"
 #include "../ast/Variables/ast.h"
 #include "../ast/ast.h"
 #include "../globals.h"
@@ -55,27 +55,26 @@ extern int zzdebug;
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
-# define YYTOKENTYPE
-  enum yytokentype
-  {
-    TIDENTIFIER = 258,
-    TINT = 259,
-    TBINOP = 260,
-    TOPENPAREN = 261,
-    TCLOSEPAREN = 262,
-    TOPENBRACE = 263,
-    TCLOSEBRACE = 264,
-    TFUNC = 265,
-    TVAR = 266,
-    TCAST = 267,
-    TWDOUBLE = 268,
-    TWINT = 269,
-    TEQUALS = 270,
-    TEXTERN = 271,
-    TOPENBRACKET = 272,
-    TCLOSEBRACKET = 273,
-    TSTAR = 274
-  };
+#	define YYTOKENTYPE
+enum yytokentype {
+	TIDENTIFIER = 258,
+	TINT = 259,
+	TBINOP = 260,
+	TOPENPAREN = 261,
+	TCLOSEPAREN = 262,
+	TOPENBRACE = 263,
+	TCLOSEBRACE = 264,
+	TFUNC = 265,
+	TVAR = 266,
+	TCAST = 267,
+	TWDOUBLE = 268,
+	TWINT = 269,
+	TEQUALS = 270,
+	TEXTERN = 271,
+	TOPENBRACKET = 272,
+	TCLOSEBRACKET = 273,
+	TSTAR = 274
+};
 #endif
 /* Tokens.  */
 #define TIDENTIFIER 258
@@ -97,26 +96,24 @@ extern int zzdebug;
 #define TSTAR 274
 
 /* Value type.  */
-#if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
+#if !defined YYSTYPE && !defined YYSTYPE_IS_DECLARED
 
-union YYSTYPE
-{
-#line 36 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1916  */
+union YYSTYPE {
+#	line 36 "/Users/zoe/Developer/hive/hive/pre/parser/parser.y" /* yacc.c:1916  */
 
-  std::string *string;
-  int number;
+	std::string* string;
+	int number;
 
-#line 110 "preparser.h" /* yacc.c:1916  */
+#	line 110 "preparser.h" /* yacc.c:1916  */
 };
 
 typedef union YYSTYPE YYSTYPE;
-# define YYSTYPE_IS_TRIVIAL 1
-# define YYSTYPE_IS_DECLARED 1
+#	define YYSTYPE_IS_TRIVIAL 1
+#	define YYSTYPE_IS_DECLARED 1
 #endif
-
 
 extern YYSTYPE zzlval;
 
-int zzparse (void);
+int zzparse(void);
 
 #endif /* !YY_ZZ_PREPARSER_H_INCLUDED  */

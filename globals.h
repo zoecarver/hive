@@ -1,8 +1,8 @@
 #pragma once
 
-#include "llvm/IR/Value.h"
-#include "llvm/IR/LLVMContext.h"
 #include "llvm/IR/IRBuilder.h"
+#include "llvm/IR/LLVMContext.h"
+#include "llvm/IR/Value.h"
 
 using namespace llvm;
 
@@ -10,18 +10,20 @@ using namespace llvm;
 extern LLVMContext mContext;
 extern IRBuilder<> mBuilder;
 extern std::unique_ptr<Module> mModule;
-extern std::map<std::string, AllocaInst *> namedVariables;
-extern Function *currentFunc;
+extern std::map<std::string, AllocaInst*> namedVariables;
+extern std::map<std::string, Value*> namedArgs;
+extern std::map<std::string, std::pair<AllocaInst*, AllocaInst*>> namedArrays;
+extern Function* currentFunc;
 
-extern AllocaInst *CreateBlockAlloca(Function *func, std::string name, Type* type);
+extern AllocaInst* CreateBlockAlloca(Function* func, std::string name, Type* type);
 
 // types
-extern Type *i32;
-extern Type *pi32;
-extern Type *i8;
-extern Type *pi8;
-extern Type *dType;
-extern Type *pdType;
+extern Type* i32;
+extern Type* pi32;
+extern Type* i8;
+extern Type* pi8;
+extern Type* dType;
+extern Type* pdType;
 
 // ARC (gc/prelex)
 extern std::string ARCCurrentFunc;

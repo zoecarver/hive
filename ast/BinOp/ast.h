@@ -6,14 +6,16 @@
 
 using namespace llvm;
 
-class BinOpAST: public AST {
-  AST *L;
-  AST *R;
-  int op;
+class BinOpAST : public AST {
+	AST* L;
+	AST* R;
+	int op;
 
-  public:
-    BinOpAST(AST *L, AST *R, int op): 
-      L(std::move(L)), R(std::move(R)), op(op) { }
-    Value *codeGen() override;
-    std::string out() override;
+public:
+	BinOpAST(AST* L, AST* R, int op)
+		: L(std::move(L))
+		, R(std::move(R))
+		, op(op) {}
+	Value* codeGen() override;
+	std::string out() override;
 };

@@ -31,6 +31,11 @@ ID       [a-z][a-z0-9]*
               SAVE_TOKEN; return TINT; // TFP;
 }
 
+"," {
+  SAVE_TOKEN; return TCOMMA;
+}
+
+
 "(" {
   SAVE_TOKEN; return TOPENPAREN;
 }
@@ -43,7 +48,7 @@ ID       [a-z][a-z0-9]*
   SAVE_TOKEN; return TCAST;
 }
 
-"func" {
+"def" {
   SAVE_TOKEN; return TFUNC;
 }
 
@@ -51,16 +56,20 @@ ID       [a-z][a-z0-9]*
   SAVE_TOKEN; return TVAR;
 }
 
-"Double" {
+"double" {
   SAVE_TOKEN; return TWDOUBLE;
 }
 
-"Int" {
+"int" {
   SAVE_TOKEN; return TWINT;
 }
 
 "extern" {
   SAVE_TOKEN; return TEXTERN;
+}
+
+"end" {
+  SAVE_TOKEN; return TEND;
 }
 
 "{" {
@@ -79,16 +88,16 @@ ID       [a-z][a-z0-9]*
   SAVE_TOKEN; return TCLOSEBRACKET;
 }
 
-"+"|"-"|"*"|"/" {
+"*" {
+  SAVE_TOKEN; return TSTAR;
+}
+
+"+"|"-"|TSTAR|"/" {
   SAVE_TOKEN; return TBINOP;
 } 
 
 "=" {
   SAVE_TOKEN; return TEQUALS;
-}
-
-"*" {
-  SAVE_TOKEN; return TSTAR;
 }
 
 {ID}        SAVE_TOKEN; return TIDENTIFIER; // printf( "An identifier: %s\n", yytext );

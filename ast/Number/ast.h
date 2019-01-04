@@ -7,11 +7,12 @@
 using namespace llvm;
 
 // template <typename T>
-class NumberAST: public AST {
-  int val; //T val;
+class NumberAST : public AST {
+	int val; //T val;
 
-  public:
-    NumberAST(int val): val(val) { }
-    Value *codeGen() override;
-    std::string out() override;
+public:
+	NumberAST(int val)
+		: val(val) {}
+	Value* codeGen() override;
+	std::string out() override;
 };

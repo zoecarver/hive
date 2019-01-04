@@ -20,20 +20,20 @@ using namespace llvm;
 Value* VariableAST::codeGen() {
 	Function* func = currentFunc; // insert point for alloca
 
-    Value* newValue = value->codeGen();
-    auto variableAlloca = namedVariables[name];
+	Value* newValue = value->codeGen();
+	auto variableAlloca = namedVariables[name];
 
-    // check if we already have the variable
-    if (variableAlloca) {
-        mBuilder.CreateStore(newValue, variableAlloca);
-        return newValue;
-    }
+	// check if we already have the variable
+	if(variableAlloca) {
+		mBuilder.CreateStore(newValue, variableAlloca);
+		return newValue;
+	}
 
-    if (type == nullptr)
-        type = newValue->getType();
-    auto size = type->getPrimitiveSizeInBits();
+	if(type == nullptr)
+		type = newValue->getType();
+	auto size = type->getPrimitiveSizeInBits();
 
-    AllocaInst* alloca = CreateBlockAlloca(func, name, type);
+	AllocaInst* alloca = CreateBlockAlloca(func, name, type);
 	mBuilder.CreateStore(newValue, alloca);
 	namedVariables[name] = alloca;
 
@@ -53,25 +53,25 @@ Value* PointerSetAST::codeGen() {
 }
 
 Value* VariableGetAST::codeGen() {
-    Value *alloca = dyn_cast_or_null<Value>(namedVariables[name]);
-    if (alloca == nullptr)
-        return dyn_cast_or_null<Value>(namedArgs[name]); // TODO: if this is a pointer we still will need to free it
+	Value* alloca = dyn_cast_or_null<Value>(namedVariables[name]);
+	if(alloca == nullptr)
+		return dyn_cast_or_null<Value>(namedArgs[name]); // TODO: if this is a pointer we still will need to free it
 
-    Value* retValue = getPointer ? alloca : mBuilder.CreateLoad(alloca);
+	Value* retValue = getPointer ? alloca : mBuilder.CreateLoad(alloca);
 
-    return retValue; // TODO: fix below
+	return retValue; // TODO: fix below
 
-//    if(ARC[ARCCurrentFunc][name] < 0) { // if we arent going to use the variable again, free it
-//        Instruction* castInst = new BitCastInst(loadAlloca, pi8);
-//        mBuilder.Insert(castInst);
-//
-//        Function* freeCall = mModule->getFunction("free");
-//        std::vector<Value*> freeArgs = {castInst};
-//        mBuilder.CreateCall(freeCall, freeArgs);
-//    } else
-//        ARC[ARCCurrentFunc][name]--;
-//
-//    return retValue;
+	//    if(ARC[ARCCurrentFunc][name] < 0) { // if we arent going to use the variable again, free it
+	//        Instruction* castInst = new BitCastInst(loadAlloca, pi8);
+	//        mBuilder.Insert(castInst);
+	//
+	//        Function* freeCall = mModule->getFunction("free");
+	//        std::vector<Value*> freeArgs = {castInst};
+	//        mBuilder.CreateCall(freeCall, freeArgs);
+	//    } else
+	//        ARC[ARCCurrentFunc][name]--;
+	//
+	//    return retValue;
 }
 
 Value* CastAST::codeGen() {
@@ -86,83 +86,84 @@ Value* CastAST::codeGen() {
 }
 
 Value* ArrayAST::codeGen() {
-    Function* func = currentFunc; // insert point for alloca
+	Function* func = currentFunc; // insert point for alloca
 
-    std::vector<Value*> arrayValues;
+	std::vector<Value*> arrayValues;
 
-    size_t arraySize = 0;
-    for (auto* v: values) {
-        Value* newValue = v->codeGen();
-        arrayValues.push_back(newValue);
+	size_t arraySize = 0;
+	for(auto* v : values) {
+		Value* newValue = v->codeGen();
+		arrayValues.push_back(newValue);
 
-        auto type = newValue->getType();
-        auto size = type->getPrimitiveSizeInBits() / 8; // get size in bytes
+		auto type = newValue->getType();
+		auto size = type->getPrimitiveSizeInBits() / 8; // get size in bytes
 
-        arraySize += size;
-    }
+		arraySize += size;
+	}
 
-    Function* mallocCall = mModule->getFunction("malloc");
-    std::vector<Value*> mallocArgs = {ConstantInt::get(mContext, APInt(32, arraySize))};
+	Function* mallocCall = mModule->getFunction("malloc");
+	std::vector<Value*> mallocArgs = {ConstantInt::get(mContext, APInt(32, arraySize))};
 
-    AllocaInst* alloca = CreateBlockAlloca(func, name, pi8);
-    Value* mallocVal = mBuilder.CreateCall(mallocCall, mallocArgs);
+	AllocaInst* alloca = CreateBlockAlloca(func, name, pi8);
+	Value* mallocVal = mBuilder.CreateCall(mallocCall, mallocArgs);
 
-    // make an array to store the sizes we need to access to get indexs of our main array
-    Function* sizesMallocCall = mModule->getFunction("malloc");
-    std::vector<Value*> sizesMallocArgs = {ConstantInt::get(mContext, APInt(32, arrayValues.size() * 4))};
+	// make an array to store the sizes we need to access to get indexs of our main array
+	Function* sizesMallocCall = mModule->getFunction("malloc");
+	std::vector<Value*> sizesMallocArgs = {ConstantInt::get(mContext, APInt(32, arrayValues.size() * 4))};
 
-    AllocaInst* sizesAlloca = CreateBlockAlloca(func, "sizes_arr", pi32);
-    Value* sizesArray = mBuilder.CreateCall(sizesMallocCall, sizesMallocArgs);
-    // cast the sizes array so we dont have to do ugly things later
-    Instruction* sizesArrayCastInst = new BitCastInst(sizesArray, pi32);
-    mBuilder.Insert(sizesArrayCastInst); // TODO is this nessisary
-    sizesArray = sizesArrayCastInst;
+	AllocaInst* sizesAlloca = CreateBlockAlloca(func, "sizes_arr", pi32);
+	Value* sizesArray = mBuilder.CreateCall(sizesMallocCall, sizesMallocArgs);
+	// cast the sizes array so we dont have to do ugly things later
+	Instruction* sizesArrayCastInst = new BitCastInst(sizesArray, pi32);
+	mBuilder.Insert(sizesArrayCastInst); // TODO is this nessisary
+	sizesArray = sizesArrayCastInst;
 
-    size_t currentSize = 0;
-    int count = 0;
-    for (auto* v: arrayValues) {
-        // cast the array to proper type so it can be stored
-        Instruction* castInst = new BitCastInst(mallocVal, PointerType::getUnqual(v->getType()));
-        mBuilder.Insert(castInst); // TODO is this nessisary
+	size_t currentSize = 0;
+	int count = 0;
+	for(auto* v : arrayValues) {
+		// cast the array to proper type so it can be stored
+		Instruction* castInst = new BitCastInst(mallocVal, PointerType::getUnqual(v->getType()));
+		mBuilder.Insert(castInst); // TODO is this nessisary
 
-        auto typeSize = v->getType()->getPrimitiveSizeInBits() / 8;
-        auto* index = ConstantInt::get(mContext, APInt(32, currentSize));
-        auto* element = mBuilder.CreateGEP(castInst, index);
+		auto typeSize = v->getType()->getPrimitiveSizeInBits() / 8;
+		auto* index = ConstantInt::get(mContext, APInt(32, currentSize));
+		auto* element = mBuilder.CreateGEP(castInst, index);
 
-        mBuilder.CreateStore(v, element);
+		mBuilder.CreateStore(v, element);
 
-        // update the sizes array accordingly
-        auto* sizesIndex = ConstantInt::get(mContext, APInt(32, count * 4)); // *4 because 4 is the number of bytes in 32 bit array
-        auto* sizesElement = mBuilder.CreateGEP(sizesArray, sizesIndex);
+		// update the sizes array accordingly
+		auto* sizesIndex =
+			ConstantInt::get(mContext, APInt(32, count * 4)); // *4 because 4 is the number of bytes in 32 bit array
+		auto* sizesElement = mBuilder.CreateGEP(sizesArray, sizesIndex);
 
-        auto* sizeValue = ConstantInt::get(mContext, APInt(32, currentSize)); // * count or current index
-        mBuilder.CreateStore(sizeValue, sizesElement);
+		auto* sizeValue = ConstantInt::get(mContext, APInt(32, currentSize)); // * count or current index
+		mBuilder.CreateStore(sizeValue, sizesElement);
 
-        currentSize += typeSize;
-        count++;
-    }
+		currentSize += typeSize;
+		count++;
+	}
 
-    mBuilder.CreateStore(mallocVal, alloca);
-    mBuilder.CreateStore(sizesArray, sizesAlloca);
-    namedArrays[name] = std::make_pair(alloca, sizesAlloca);
+	mBuilder.CreateStore(mallocVal, alloca);
+	mBuilder.CreateStore(sizesArray, sizesAlloca);
+	namedArrays[name] = std::make_pair(alloca, sizesAlloca);
 
-    return alloca;
+	return alloca;
 }
 
 Value* ArrayGetAST::codeGen() {
-    auto a = namedArrays[arrayName];
-    auto* array = mBuilder.CreateLoad(a.first);
-    auto* sizes = mBuilder.CreateLoad(a.second);
+	auto a = namedArrays[arrayName];
+	auto* array = mBuilder.CreateLoad(a.first);
+	auto* sizes = mBuilder.CreateLoad(a.second);
 
-    // bitcast array to type
-    Instruction* arrayCastInst = new BitCastInst(array, pi32); // TODO: this type needs to be dynamic
-    mBuilder.Insert(arrayCastInst); // TODO is this nessisary
+	// bitcast array to type
+	Instruction* arrayCastInst = new BitCastInst(array, pi32); // TODO: this type needs to be dynamic
+	mBuilder.Insert(arrayCastInst); // TODO is this nessisary
 
-    auto* sizeElement = mBuilder.CreateGEP(sizes, index->codeGen());
-    auto* arrayIndex = mBuilder.CreateLoad(sizeElement);
+	auto* sizeElement = mBuilder.CreateGEP(sizes, index->codeGen());
+	auto* arrayIndex = mBuilder.CreateLoad(sizeElement);
 
-    auto* element = mBuilder.CreateGEP(arrayCastInst, arrayIndex);
-    return mBuilder.CreateLoad(element);
+	auto* element = mBuilder.CreateGEP(arrayCastInst, arrayIndex);
+	return mBuilder.CreateLoad(element);
 }
 
 Value* LoadVariableAST::codeGen() {
@@ -190,7 +191,7 @@ std::string VariableGetAST::out() {
 }
 
 std::string ArrayAST::out() {
-    return std::string("Not Implemented");
+	return std::string("Not Implemented");
 }
 
 std::string ArrayGetAST::out() {
