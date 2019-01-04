@@ -2,5 +2,5 @@ extern print(int) -> int
 
 def main int a
     b = [1, 2000, 3]
-    print(b[1])
+    print(b[2 * 1 - 1])
 end

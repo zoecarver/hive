@@ -33,7 +33,7 @@ entry:
   %12 = load i8*, i8** %b
   %13 = load i32*, i32** %sizes_arr
   %14 = bitcast i8* %12 to i32*
-  %15 = getelementptr i32, i32* %13, i32 1
+  %15 = getelementptr i32, i32* %13, i32 0
   %16 = load i32, i32* %15
   %17 = getelementptr i32, i32* %14, i32 %16
   %18 = load i32, i32* %17
