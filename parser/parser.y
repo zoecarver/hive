@@ -56,7 +56,7 @@ BlockAST *res;
 %type <any> constExpr func var cast extern call array varArray
 %type <base> program statments
 %type <args> funcArgs optionalArgParens
-%type <typeArgs> typeArgs
+%type <typeArgs> typeArgs optionalTypeArgParens
 %type <type> type
 %type <valueArgs> valueArgs arrayValues
 %type <type> returnType varType
@@ -137,6 +137,14 @@ BlockAST *res;
     | funcArgs {
         $$ = $1;
     }
+    	  ;
+    optionalTypeArgParens : TOPENPAREN typeArgs TCLOSEPAREN {
+    	$$ = $2;
+    }
+    | typeArgs {
+	$$ = $1;
+    }
+          ;
     funcArgs    : {
         auto tmpArgs = std::vector<std::pair<std::string, llvm::Type *>>();
         $$ = &tmpArgs;
@@ -149,8 +157,8 @@ BlockAST *res;
         auto tmpArgs = std::vector<Type *>();
         $$ = &tmpArgs;
     }
-    | typeArgs type {
-        $1->push_back($<type>2);
+    | typeArgs seperator type {
+        $1->push_back($<type>3);
     }
           ;
     valueArgs   : constExpr {
@@ -171,6 +179,11 @@ BlockAST *res;
     | TWINT { $$ = i32; }
     | TWARRAY { $$ = pi8; }
     | type TSTAR { $$ = PointerType::getUnqual($<type>1); }
+    | TFUNC optionalTypeArgParens returnType { // TODO: why isnt optional parans working?
+    	auto* tmpArgs = $2;
+    	auto* FTH = new FunctionTypeHelper($3, *tmpArgs);
+    	$$ = PointerType::getUnqual(FTH->codeGen());
+     }
           ;
     extern      : TEXTERN TIDENTIFIER TOPENPAREN typeArgs TCLOSEPAREN returnType {
         $$ = new PrototypeAST(*$<string>2, *$<typeArgs>4, $<type>6);

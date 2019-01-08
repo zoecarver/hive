@@ -96,6 +96,10 @@ ID       [a-z][a-z0-9]*
   SAVE_TOKEN; return TSTAR;
 }
 
+"&" {
+  SAVE_TOKEN; return TAND;
+}
+
 "+"|"-"|TSTAR|"/" {
   SAVE_TOKEN; return TBINOP;
 } 

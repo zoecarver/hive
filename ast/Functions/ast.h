@@ -39,6 +39,17 @@ public:
 	std::string out() override;
 };
 
+class FunctionTypeHelper {
+	Type* returnType;
+	std::vector<Type*> argTypes;
+
+public:
+	FunctionTypeHelper(Type* returnType, std::vector<Type*> argTypes)
+		: returnType(returnType)
+		, argTypes(argTypes) {}
+	Type* codeGen();
+};
+
 class CallAST : public AST {
 	std::string name;
 	std::vector<AST*> args;

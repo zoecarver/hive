@@ -21,8 +21,26 @@ Type* i8 = IntegerType::get(mContext, 8);
 Type* pi8 = PointerType::getUnqual(i8);
 Type* dType = Type::getDoubleTy(mContext);
 Type* pdType = PointerType::getUnqual(dType);
+StructType* aType = StructType::get(mContext, {i32, pi8});
 
 AllocaInst* CreateBlockAlloca(Function* func, std::string name, Type* type) {
 	IRBuilder<> tmpBuilder(&func->getEntryBlock(), func->getEntryBlock().begin());
 	return tmpBuilder.CreateAlloca(type, nullptr, name);
+}
+
+Type* mapStructToType(Value* i) {
+//	mBuilder.CreateICmp()
+//	auto* index = dyn_cast<ConstantInt>(i);
+//	auto indexInt = index->getSExtValue();
+//
+//	if (indexInt == 0) return i32;
+//	if (indexInt == 1) return i8;
+//	if (indexInt == 2) return dType;
+}
+
+Value* mapTypeToValue(Type* t) {
+	auto tID = t->getTypeID();
+	if (tID == i32->getTypeID()) return ConstantInt::get(mContext, APInt(8, 0));
+	if (tID == i8->getTypeID()) return ConstantInt::get(mContext, APInt(8, 1));
+	if (tID == dType->getTypeID()) return ConstantInt::get(mContext, APInt(8, 2));
 }

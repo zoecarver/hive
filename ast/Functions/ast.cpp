@@ -51,6 +51,11 @@ Value* FunctionAST::codeGen() {
 
 Value* CallAST::codeGen() {
 	Function* func = mModule->getFunction(name);
+	if (!func) { // also search other places
+		auto* funcPtr = namedArgs[name];
+		func = (Function *)mBuilder.CreateLoad(funcPtr);
+	}
+	// TODO: also search namedVariables
 
 	std::vector<Value*> argsV;
 	for(auto* e : args)
@@ -65,6 +70,11 @@ std::string FunctionAST::out() {
 
 std::string CallAST::out() {
 	return std::string("Not Implemented");
+}
+
+Type *FunctionTypeHelper::codeGen() {
+    FunctionType* FT = FunctionType::get(returnType, argTypes, false);
+    return FT;
 }
 
 Value* PrototypeAST::codeGen() {

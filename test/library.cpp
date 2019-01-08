@@ -8,6 +8,30 @@
 
 using namespace std;
 
+bool IsOdd (int i) { return ((i%2)==1); }
+
+typedef int (*functiontype)(int);
+extern "C" DLLEXPORT int* filter(int* arr, int size, functiontype sort_func) {
+//  cout << "size of int " << sizeof(int) << " size of arr " << sizeof(arr) << "\n";
+
+  int* pbegin = arr;
+  int* pend = arr + size;
+
+//  std::cout << "[before] the range contains:";
+//  for (int* p=pbegin; p!=pend; ++p)
+//    std::cout << ' ' << *p;
+//  std::cout << '\n';
+
+  pend = remove_if (pbegin, pend, sort_func);
+
+//  std::cout << "[after] the range contains:";
+//  for (int* p=pbegin; p!=pend; ++p)
+//    std::cout << ' ' << *p;
+//  std::cout << '\n';
+
+  return pbegin;
+}
+
 /// printd - printf that takes a double prints it as "%f\n", returning 0.
 extern "C" DLLEXPORT int print(int X) {
   fprintf(stderr, "%i\n", X);

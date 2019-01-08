@@ -6,6 +6,7 @@
 #include <iostream>
 #include <fstream>
 #include <utility>
+#include <llvm/Support/raw_ostream.h>
 
 extern FILE* yyin;
 extern FILE* zzin;

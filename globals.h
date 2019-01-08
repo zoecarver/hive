@@ -16,6 +16,8 @@ extern std::map<std::string, std::pair<AllocaInst*, AllocaInst*>> namedArrays;
 extern Function* currentFunc;
 
 extern AllocaInst* CreateBlockAlloca(Function* func, std::string name, Type* type);
+extern Type* mapStructToType(Value* i);
+extern Value* mapTypeToValue(Type* t);
 
 // types
 extern Type* i32;
@@ -24,6 +26,7 @@ extern Type* i8;
 extern Type* pi8;
 extern Type* dType;
 extern Type* pdType;
+extern StructType* aType;
 
 // ARC (gc/prelex)
 extern std::string ARCCurrentFunc;
