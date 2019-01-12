@@ -32,9 +32,15 @@ extern "C" DLLEXPORT int* filter(int* arr, int size, functiontype sort_func) {
   return pbegin;
 }
 
-/// printd - printf that takes a double prints it as "%f\n", returning 0.
+/// print - printf that takes an int prints it as "%i\n", returning 0.
 extern "C" DLLEXPORT int print(int X) {
   fprintf(stderr, "%i\n", X);
+  return 0;
+}
+
+/// printd - printf that takes a double prints it as "%f\n", returning 0.
+extern "C" DLLEXPORT int printd(double X) {
+  fprintf(stderr, "%f\n", X);
   return 0;
 }
 

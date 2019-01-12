@@ -1,17 +1,19 @@
 extern print(int)
-extern print(double)
-# extern filter(int*, int, def (int) -> int) -> int*
+extern printd(double)
 
-# def callme (def f)
-#     f()
-# end
+def add double a, double b -> double
+    a + b
+end
 
-def simple int i
-    print(i)
+def simple double i
+    printd(i)
 end
 
 def main int a
-    a = 1
-    if (0) print(2) else print(4) end
-    simple(5)
+    if (a) print(2) else print(4) end
+
+    x = if (1) 5.0 else 2.0 end
+    x = add(x, 2.0)
+
+    simple(x)
 end

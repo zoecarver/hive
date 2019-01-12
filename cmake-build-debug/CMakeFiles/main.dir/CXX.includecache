@@ -6,23 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/zoe/Developer/hive/hive/ast/Functions/ast.cpp
-iostream
--
+/Users/zoe/Developer/hive/hive/ast/BinOp/ast.cpp
 type_traits
 -
-../../globals.h
-/Users/zoe/Developer/hive/hive/globals.h
 ast.h
-/Users/zoe/Developer/hive/hive/ast/Functions/ast.h
+/Users/zoe/Developer/hive/hive/ast/BinOp/ast.h
 llvm/IR/Constants.h
-/Users/zoe/Developer/hive/hive/ast/Functions/llvm/IR/Constants.h
+/Users/zoe/Developer/hive/hive/ast/BinOp/llvm/IR/Constants.h
 llvm/Support/raw_ostream.h
-/Users/zoe/Developer/hive/hive/ast/Functions/llvm/Support/raw_ostream.h
+/Users/zoe/Developer/hive/hive/ast/BinOp/llvm/Support/raw_ostream.h
 
-/Users/zoe/Developer/hive/hive/ast/Functions/ast.h
+/Users/zoe/Developer/hive/hive/ast/BinOp/ast.h
 llvm/IR/Value.h
-/Users/zoe/Developer/hive/hive/ast/Functions/llvm/IR/Value.h
+/Users/zoe/Developer/hive/hive/ast/BinOp/llvm/IR/Value.h
 ../ast.h
 /Users/zoe/Developer/hive/hive/ast/ast.h
 
@@ -35,12 +31,4 @@ llvm/IR/LLVMContext.h
 /Users/zoe/Developer/hive/hive/ast/llvm/IR/LLVMContext.h
 llvm/IR/Value.h
 /Users/zoe/Developer/hive/hive/ast/llvm/IR/Value.h
-
-/Users/zoe/Developer/hive/hive/globals.h
-llvm/IR/IRBuilder.h
-/Users/zoe/Developer/hive/hive/llvm/IR/IRBuilder.h
-llvm/IR/LLVMContext.h
-/Users/zoe/Developer/hive/hive/llvm/IR/LLVMContext.h
-llvm/IR/Value.h
-/Users/zoe/Developer/hive/hive/llvm/IR/Value.h
 
