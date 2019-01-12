@@ -13,8 +13,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/zoe/Developer/hive/hive/globals.cpp" "/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/main.dir/globals.cpp.o"
   "/Users/zoe/Developer/hive/hive/main.cpp" "/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/main.dir/main.cpp.o"
   "/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp" "/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/main.dir/parser.cpp.o"
-  "/Users/zoe/Developer/hive/hive/cmake-build-debug/preparser.cpp" "/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/main.dir/preparser.cpp.o"
-  "/Users/zoe/Developer/hive/hive/cmake-build-debug/pretokens.cpp" "/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/main.dir/pretokens.cpp.o"
   "/Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp" "/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/main.dir/tokens.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")

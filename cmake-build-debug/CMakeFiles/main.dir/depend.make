@@ -46,23 +46,6 @@ CMakeFiles/main.dir/parser.cpp.o: ../ast/ast.h
 CMakeFiles/main.dir/parser.cpp.o: parser.cpp
 CMakeFiles/main.dir/parser.cpp.o: ../globals.h
 
-CMakeFiles/main.dir/preparser.cpp.o: ../ast/BinOp/ast.h
-CMakeFiles/main.dir/preparser.cpp.o: ../ast/Functions/ast.h
-CMakeFiles/main.dir/preparser.cpp.o: ../ast/Number/ast.h
-CMakeFiles/main.dir/preparser.cpp.o: ../ast/Variables/ast.h
-CMakeFiles/main.dir/preparser.cpp.o: ../ast/ast.h
-CMakeFiles/main.dir/preparser.cpp.o: preparser.cpp
-CMakeFiles/main.dir/preparser.cpp.o: ../globals.h
-
-CMakeFiles/main.dir/pretokens.cpp.o: ../ast/BinOp/ast.h
-CMakeFiles/main.dir/pretokens.cpp.o: ../ast/Functions/ast.h
-CMakeFiles/main.dir/pretokens.cpp.o: ../ast/Number/ast.h
-CMakeFiles/main.dir/pretokens.cpp.o: ../ast/Variables/ast.h
-CMakeFiles/main.dir/pretokens.cpp.o: ../ast/ast.h
-CMakeFiles/main.dir/pretokens.cpp.o: preparser.h
-CMakeFiles/main.dir/pretokens.cpp.o: pretokens.cpp
-CMakeFiles/main.dir/pretokens.cpp.o: ../globals.h
-
 CMakeFiles/main.dir/tokens.cpp.o: ../ast/BinOp/ast.h
 CMakeFiles/main.dir/tokens.cpp.o: ../ast/ControlFlow/ast.h
 CMakeFiles/main.dir/tokens.cpp.o: ../ast/Functions/ast.h

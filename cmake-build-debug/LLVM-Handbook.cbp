@@ -161,21 +161,6 @@
 		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/preparser.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/preparser.cpp.rule">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/preparser.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/pretokens.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/pretokens.cpp.rule">
-			<Option target="main"/>
-		</Unit>
 		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp">
 			<Option target="main"/>
 		</Unit>
@@ -198,12 +183,6 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/zoe/Developer/hive/hive/parser/parser.y">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/zoe/Developer/hive/hive/pre/lexer/tokens.l">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/zoe/Developer/hive/hive/pre/parser/parser.y">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/zoe/Developer/hive/hive/CMakeLists.txt">

@@ -17,7 +17,6 @@ Value* FunctionAST::codeGen() {
 	FunctionType* FT = FunctionType::get(returnType, argTypes, false);
 	Function* func = Function::Create(FT, Function::ExternalLinkage, name, mModule.get());
 	currentFunc = func;
-	ARCCurrentFunc = name;
 
 	auto i = 0;
 	for(auto& a : func->args())

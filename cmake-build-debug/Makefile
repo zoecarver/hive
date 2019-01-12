@@ -392,60 +392,6 @@ parser.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/parser.cpp.s
 .PHONY : parser.cpp.s
 
-preparser.o: preparser.cpp.o
-
-.PHONY : preparser.o
-
-# target to build an object file
-preparser.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/preparser.cpp.o
-.PHONY : preparser.cpp.o
-
-preparser.i: preparser.cpp.i
-
-.PHONY : preparser.i
-
-# target to preprocess a source file
-preparser.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/preparser.cpp.i
-.PHONY : preparser.cpp.i
-
-preparser.s: preparser.cpp.s
-
-.PHONY : preparser.s
-
-# target to generate assembly for a file
-preparser.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/preparser.cpp.s
-.PHONY : preparser.cpp.s
-
-pretokens.o: pretokens.cpp.o
-
-.PHONY : pretokens.o
-
-# target to build an object file
-pretokens.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/pretokens.cpp.o
-.PHONY : pretokens.cpp.o
-
-pretokens.i: pretokens.cpp.i
-
-.PHONY : pretokens.i
-
-# target to preprocess a source file
-pretokens.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/pretokens.cpp.i
-.PHONY : pretokens.cpp.i
-
-pretokens.s: pretokens.cpp.s
-
-.PHONY : pretokens.s
-
-# target to generate assembly for a file
-pretokens.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/pretokens.cpp.s
-.PHONY : pretokens.cpp.s
-
 tokens.o: tokens.cpp.o
 
 .PHONY : tokens.o
@@ -511,12 +457,6 @@ help:
 	@echo "... parser.o"
 	@echo "... parser.i"
 	@echo "... parser.s"
-	@echo "... preparser.o"
-	@echo "... preparser.i"
-	@echo "... preparser.s"
-	@echo "... pretokens.o"
-	@echo "... pretokens.i"
-	@echo "... pretokens.s"
 	@echo "... tokens.o"
 	@echo "... tokens.i"
 	@echo "... tokens.s"

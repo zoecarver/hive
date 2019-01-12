@@ -47,12 +47,6 @@ set(SOURCES
   parser/parser.y
   ${CMAKE_CURRENT_BINARY_DIR}/parser.cpp
   ${CMAKE_CURRENT_BINARY_DIR}/tokens.cpp
-
-  # PRE Parser / Lexer
-  pre/lexer/tokens.l
-  pre/parser/parser.y
-  ${CMAKE_CURRENT_BINARY_DIR}/preparser.cpp
-  ${CMAKE_CURRENT_BINARY_DIR}/pretokens.cpp
 )
 
 set(HEADERS

@@ -12,12 +12,9 @@ extern IRBuilder<> mBuilder;
 extern std::unique_ptr<Module> mModule;
 extern std::map<std::string, AllocaInst*> namedVariables;
 extern std::map<std::string, Value*> namedArgs;
-extern std::map<std::string, std::pair<AllocaInst*, AllocaInst*>> namedArrays;
 extern Function* currentFunc;
 
 extern AllocaInst* CreateBlockAlloca(Function* func, std::string name, Type* type);
-extern Type* mapStructToType(Value* i);
-extern Value* mapTypeToValue(Type* t);
 
 // types
 extern Type* i32;

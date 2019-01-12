@@ -1,7 +1,7 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/zoe/Developer/hive/hive
 -- Found LLVM Package Version:6.0.1
 -- LLVM Built type : Release
-CMake Warning (dev) at CMakeLists.txt:82 (ADD_CUSTOM_COMMAND):
+CMake Warning (dev) at CMakeLists.txt:76 (ADD_CUSTOM_COMMAND):
   Policy CMP0050 is not set: Disallow add_custom_command SOURCE signatures.
   Run "cmake --help-policy CMP0050" for policy details.  Use the cmake_policy
   command to set the policy and suppress this warning.
@@ -9,7 +9,7 @@ CMake Warning (dev) at CMakeLists.txt:82 (ADD_CUSTOM_COMMAND):
   The SOURCE signatures of add_custom_command are no longer supported.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at CMakeLists.txt:92 (ADD_CUSTOM_COMMAND):
+CMake Warning (dev) at CMakeLists.txt:86 (ADD_CUSTOM_COMMAND):
   Policy CMP0050 is not set: Disallow add_custom_command SOURCE signatures.
   Run "cmake --help-policy CMP0050" for policy details.  Use the cmake_policy
   command to set the policy and suppress this warning.
@@ -17,7 +17,7 @@ CMake Warning (dev) at CMakeLists.txt:92 (ADD_CUSTOM_COMMAND):
   The SOURCE signatures of add_custom_command are no longer supported.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at CMakeLists.txt:103 (ADD_CUSTOM_COMMAND):
+CMake Warning (dev) at CMakeLists.txt:97 (ADD_CUSTOM_COMMAND):
   Policy CMP0050 is not set: Disallow add_custom_command SOURCE signatures.
   Run "cmake --help-policy CMP0050" for policy details.  Use the cmake_policy
   command to set the policy and suppress this warning.
@@ -25,7 +25,7 @@ CMake Warning (dev) at CMakeLists.txt:103 (ADD_CUSTOM_COMMAND):
   The SOURCE signatures of add_custom_command are no longer supported.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at CMakeLists.txt:115 (ADD_CUSTOM_COMMAND):
+CMake Warning (dev) at CMakeLists.txt:109 (ADD_CUSTOM_COMMAND):
   Policy CMP0050 is not set: Disallow add_custom_command SOURCE signatures.
   Run "cmake --help-policy CMP0050" for policy details.  Use the cmake_policy
   command to set the policy and suppress this warning.

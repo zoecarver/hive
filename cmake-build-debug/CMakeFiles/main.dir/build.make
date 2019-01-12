@@ -66,18 +66,9 @@ tokens.cpp: ../lexer/tokens.l
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating tokens.cpp"
 	/usr/bin/flex -o /Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp /Users/zoe/Developer/hive/hive/lexer/tokens.l
 
-preparser.cpp: pretokens.cpp
-preparser.cpp: ../pre/parser/parser.y
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating preparser.cpp"
-	/usr/local/bin/bison -y /Users/zoe/Developer/hive/hive/pre/parser/parser.y -p zz -o /Users/zoe/Developer/hive/hive/cmake-build-debug/preparser.cpp --defines=preparser.h
-
-pretokens.cpp: ../pre/lexer/tokens.l
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating pretokens.cpp"
-	/usr/bin/flex -o /Users/zoe/Developer/hive/hive/cmake-build-debug/pretokens.cpp -P zz /Users/zoe/Developer/hive/hive/pre/lexer/tokens.l
-
 CMakeFiles/main.dir/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
 	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /Users/zoe/Developer/hive/hive/main.cpp
 
 CMakeFiles/main.dir/main.cpp.i: cmake_force
@@ -90,7 +81,7 @@ CMakeFiles/main.dir/main.cpp.s: cmake_force
 
 CMakeFiles/main.dir/globals.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/globals.cpp.o: ../globals.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/globals.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/globals.cpp.o"
 	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/globals.cpp.o -c /Users/zoe/Developer/hive/hive/globals.cpp
 
 CMakeFiles/main.dir/globals.cpp.i: cmake_force
@@ -103,7 +94,7 @@ CMakeFiles/main.dir/globals.cpp.s: cmake_force
 
 CMakeFiles/main.dir/ast/ast.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ast/ast.cpp.o: ../ast/ast.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/ast/ast.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/ast/ast.cpp.o"
 	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/ast/ast.cpp.o -c /Users/zoe/Developer/hive/hive/ast/ast.cpp
 
 CMakeFiles/main.dir/ast/ast.cpp.i: cmake_force
@@ -116,7 +107,7 @@ CMakeFiles/main.dir/ast/ast.cpp.s: cmake_force
 
 CMakeFiles/main.dir/ast/Number/ast.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ast/Number/ast.cpp.o: ../ast/Number/ast.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/ast/Number/ast.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/ast/Number/ast.cpp.o"
 	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/ast/Number/ast.cpp.o -c /Users/zoe/Developer/hive/hive/ast/Number/ast.cpp
 
 CMakeFiles/main.dir/ast/Number/ast.cpp.i: cmake_force
@@ -129,7 +120,7 @@ CMakeFiles/main.dir/ast/Number/ast.cpp.s: cmake_force
 
 CMakeFiles/main.dir/ast/BinOp/ast.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ast/BinOp/ast.cpp.o: ../ast/BinOp/ast.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/ast/BinOp/ast.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/ast/BinOp/ast.cpp.o"
 	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/ast/BinOp/ast.cpp.o -c /Users/zoe/Developer/hive/hive/ast/BinOp/ast.cpp
 
 CMakeFiles/main.dir/ast/BinOp/ast.cpp.i: cmake_force
@@ -142,7 +133,7 @@ CMakeFiles/main.dir/ast/BinOp/ast.cpp.s: cmake_force
 
 CMakeFiles/main.dir/ast/Functions/ast.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ast/Functions/ast.cpp.o: ../ast/Functions/ast.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/ast/Functions/ast.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/ast/Functions/ast.cpp.o"
 	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/ast/Functions/ast.cpp.o -c /Users/zoe/Developer/hive/hive/ast/Functions/ast.cpp
 
 CMakeFiles/main.dir/ast/Functions/ast.cpp.i: cmake_force
@@ -155,7 +146,7 @@ CMakeFiles/main.dir/ast/Functions/ast.cpp.s: cmake_force
 
 CMakeFiles/main.dir/ast/Variables/ast.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ast/Variables/ast.cpp.o: ../ast/Variables/ast.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/main.dir/ast/Variables/ast.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/ast/Variables/ast.cpp.o"
 	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/ast/Variables/ast.cpp.o -c /Users/zoe/Developer/hive/hive/ast/Variables/ast.cpp
 
 CMakeFiles/main.dir/ast/Variables/ast.cpp.i: cmake_force
@@ -168,7 +159,7 @@ CMakeFiles/main.dir/ast/Variables/ast.cpp.s: cmake_force
 
 CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.o: ../ast/ControlFlow/ast.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.o"
 	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.o -c /Users/zoe/Developer/hive/hive/ast/ControlFlow/ast.cpp
 
 CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.i: cmake_force
@@ -181,7 +172,7 @@ CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.s: cmake_force
 
 CMakeFiles/main.dir/parser.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/parser.cpp.o: parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/parser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/main.dir/parser.cpp.o"
 	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/parser.cpp.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp
 
 CMakeFiles/main.dir/parser.cpp.i: cmake_force
@@ -194,7 +185,7 @@ CMakeFiles/main.dir/parser.cpp.s: cmake_force
 
 CMakeFiles/main.dir/tokens.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/tokens.cpp.o: tokens.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/tokens.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/tokens.cpp.o"
 	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/tokens.cpp.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp
 
 CMakeFiles/main.dir/tokens.cpp.i: cmake_force
@@ -204,32 +195,6 @@ CMakeFiles/main.dir/tokens.cpp.i: cmake_force
 CMakeFiles/main.dir/tokens.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/tokens.cpp.s"
 	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp -o CMakeFiles/main.dir/tokens.cpp.s
-
-CMakeFiles/main.dir/preparser.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/preparser.cpp.o: preparser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/main.dir/preparser.cpp.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/preparser.cpp.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/preparser.cpp
-
-CMakeFiles/main.dir/preparser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/preparser.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zoe/Developer/hive/hive/cmake-build-debug/preparser.cpp > CMakeFiles/main.dir/preparser.cpp.i
-
-CMakeFiles/main.dir/preparser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/preparser.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zoe/Developer/hive/hive/cmake-build-debug/preparser.cpp -o CMakeFiles/main.dir/preparser.cpp.s
-
-CMakeFiles/main.dir/pretokens.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/pretokens.cpp.o: pretokens.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/main.dir/pretokens.cpp.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/pretokens.cpp.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/pretokens.cpp
-
-CMakeFiles/main.dir/pretokens.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/pretokens.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zoe/Developer/hive/hive/cmake-build-debug/pretokens.cpp > CMakeFiles/main.dir/pretokens.cpp.i
-
-CMakeFiles/main.dir/pretokens.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/pretokens.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zoe/Developer/hive/hive/cmake-build-debug/pretokens.cpp -o CMakeFiles/main.dir/pretokens.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -242,9 +207,7 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/ast/Variables/ast.cpp.o" \
 "CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.o" \
 "CMakeFiles/main.dir/parser.cpp.o" \
-"CMakeFiles/main.dir/tokens.cpp.o" \
-"CMakeFiles/main.dir/preparser.cpp.o" \
-"CMakeFiles/main.dir/pretokens.cpp.o"
+"CMakeFiles/main.dir/tokens.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -259,8 +222,6 @@ main: CMakeFiles/main.dir/ast/Variables/ast.cpp.o
 main: CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.o
 main: CMakeFiles/main.dir/parser.cpp.o
 main: CMakeFiles/main.dir/tokens.cpp.o
-main: CMakeFiles/main.dir/preparser.cpp.o
-main: CMakeFiles/main.dir/pretokens.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: /usr/local/opt/llvm@6/lib/libLLVMMCJIT.a
 main: /usr/local/opt/llvm@6/lib/libLLVMInterpreter.a
@@ -305,7 +266,7 @@ main: /usr/local/opt/llvm@6/lib/libLLVMMC.a
 main: /usr/local/opt/llvm@6/lib/libLLVMSupport.a
 main: /usr/local/opt/llvm@6/lib/libLLVMDemangle.a
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -319,8 +280,6 @@ CMakeFiles/main.dir/clean:
 
 CMakeFiles/main.dir/depend: parser.cpp
 CMakeFiles/main.dir/depend: tokens.cpp
-CMakeFiles/main.dir/depend: preparser.cpp
-CMakeFiles/main.dir/depend: pretokens.cpp
 	cd /Users/zoe/Developer/hive/hive/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/zoe/Developer/hive/hive /Users/zoe/Developer/hive/hive /Users/zoe/Developer/hive/hive/cmake-build-debug /Users/zoe/Developer/hive/hive/cmake-build-debug /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 
