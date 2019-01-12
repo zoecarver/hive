@@ -25,6 +25,7 @@ entry:
 
 define i8 @main(i32 %a) {
 entry:
+  %arr = alloca double*
   %x = alloca double
   %0 = sitofp i32 %a to double
   %ifcond = fcmp one double %0, 0.000000e+00
@@ -54,8 +55,23 @@ end3:                                             ; preds = %else2, %then1
   %3 = load double, double* %x
   %4 = call double @add(double %3, double 2.000000e+00)
   store double %4, double* %x
-  %5 = load double, double* %x
-  %6 = call i8 @simple(double %5)
-  ret i8 %6
+  %5 = call i8* @malloc(i32 32)
+  %6 = bitcast i8* %5 to double*
+  %7 = getelementptr double, double* %6, i32 0
+  store double 1.000000e+00, double* %7
+  %8 = getelementptr double, double* %6, i32 1
+  store double 2.000000e+00, double* %8
+  %9 = getelementptr double, double* %6, i32 2
+  store double 3.000000e+00, double* %9
+  %10 = getelementptr double, double* %6, i32 3
+  store double 4.000000e+00, double* %10
+  store double* %6, double** %arr
+  %11 = load double*, double** %arr
+  %12 = getelementptr double, double* %11, i32 1
+  %13 = load double, double* %12
+  %14 = call i8 @printd(double %13)
+  %15 = load double, double* %x
+  %16 = call i8 @simple(double %15)
+  ret i8 %16
 }
 

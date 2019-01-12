@@ -5,10 +5,6 @@
 #ifndef LLVM_HANDBOOK_SPEED_TEST_H
 #define LLVM_HANDBOOK_SPEED_TEST_H
 
-
-class speed_test {
-
-};
-
+class speed_test {};
 
 #endif //LLVM_HANDBOOK_SPEED_TEST_H

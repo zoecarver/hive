@@ -11,8 +11,8 @@ using namespace llvm;
 extern LLVMContext mContext;
 
 Value* NumberAST::codeGen() {
-	 if (type->isDoubleTy())
-	   return ConstantFP::get(mContext, APFloat(val));
+	if(type->isDoubleTy())
+		return ConstantFP::get(mContext, APFloat(val));
 	return ConstantInt::get(mContext, APInt(32, (uint64_t)val));
 }
 

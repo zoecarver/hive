@@ -18,16 +18,20 @@ Value* BinOpAST::codeGen() {
 
 	switch(op) {
 	case '+':
-		if (left->getType()->isDoubleTy()) return mBuilder.CreateFAdd(left, right, "addtmp");
+		if(left->getType()->isDoubleTy())
+			return mBuilder.CreateFAdd(left, right, "addtmp");
 		return mBuilder.CreateAdd(left, right, "addtmp");
 	case '-':
-		if (left->getType()->isDoubleTy()) return mBuilder.CreateFSub(left, right, "addtmp");
+		if(left->getType()->isDoubleTy())
+			return mBuilder.CreateFSub(left, right, "addtmp");
 		return mBuilder.CreateSub(left, right, "subtmp");
 	case '*':
-		if (left->getType()->isDoubleTy()) return mBuilder.CreateFMul(left, right, "addtmp");
+		if(left->getType()->isDoubleTy())
+			return mBuilder.CreateFMul(left, right, "addtmp");
 		return mBuilder.CreateMul(left, right, "multmp");
 	case '/':
-		if (left->getType()->isDoubleTy()) return mBuilder.CreateFDiv(left, right, "addtmp");
+		if(left->getType()->isDoubleTy())
+			return mBuilder.CreateFDiv(left, right, "addtmp");
 		return mBuilder.CreateSDiv(left, right, "divtmp");
 	case '=':
 		return mBuilder.CreateStore(right, left);

@@ -12,7 +12,8 @@ class NumberAST : public AST {
 
 public:
 	NumberAST(double val, Type* type)
-		: val(val), type(type) {}
+		: val(val)
+		, type(type) {}
 	Value* codeGen() override;
 	std::string out() override;
 };

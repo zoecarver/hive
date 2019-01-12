@@ -82,8 +82,6 @@ BlockAST *res;
     | array { $$ = $<any>1; }
     | constExpr TBINOP constExpr { $$ = new BinOpAST($1, $3, $2->c_str()[0]); }
     | constExpr TSTAR constExpr { $$ = new BinOpAST($1, $3, $2->c_str()[0]); }
-//    | TIDENTIFIER TEQUALS constExpr { $$ = new VariableSetAST(*$<string>1, $<any>3); }
-//    | constExpr TEQUALS constExpr { $$ = new PointerSetAST($<any>1, $<any>3); }
     | constExpr TSTAR { $$ = new LoadVariableAST($<any>1); }
     | TIDENTIFIER TAND { $$ = new VariableGetAST(*$<string>1, true); }
     | TOPENPAREN constExpr TCLOSEPAREN { $$ = $2; }

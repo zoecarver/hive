@@ -31,20 +31,20 @@
    version 2.2 of Bison.  */
 
 #ifndef YY_YY_PARSER_H_INCLUDED
-# define YY_YY_PARSER_H_INCLUDED
+#define YY_YY_PARSER_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
-# define YYDEBUG 0
+#	define YYDEBUG 0
 #endif
 #if YYDEBUG
 extern int yydebug;
 #endif
 /* "%code requires" blocks.  */
 #line 1 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1916  */
- 
-#include "../ast/Number/ast.h"
+
 #include "../ast/BinOp/ast.h"
 #include "../ast/Functions/ast.h"
+#include "../ast/Number/ast.h"
 #include "../ast/Variables/ast.h"
 #include "../ast/ast.h"
 #include "../globals.h"
@@ -55,33 +55,32 @@ extern int yydebug;
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
-# define YYTOKENTYPE
-  enum yytokentype
-  {
-    TIDENTIFIER = 258,
-    TINT = 259,
-    TBINOP = 260,
-    TOPENPAREN = 261,
-    TCLOSEPAREN = 262,
-    TOPENBRACE = 263,
-    TCLOSEBRACE = 264,
-    TFUNC = 265,
-    TVAR = 266,
-    TCAST = 267,
-    TWDOUBLE = 268,
-    TWINT = 269,
-    TEQUALS = 270,
-    TEXTERN = 271,
-    TAND = 272,
-    TOPENBRACKET = 273,
-    TCLOSEBRACKET = 274,
-    TSTAR = 275,
-    TEND = 276,
-    TCOLON = 277,
-    TCOMMA = 278,
-    TWARRAY = 279,
-    arg = 280
-  };
+#	define YYTOKENTYPE
+enum yytokentype {
+	TIDENTIFIER = 258,
+	TINT = 259,
+	TBINOP = 260,
+	TOPENPAREN = 261,
+	TCLOSEPAREN = 262,
+	TOPENBRACE = 263,
+	TCLOSEBRACE = 264,
+	TFUNC = 265,
+	TVAR = 266,
+	TCAST = 267,
+	TWDOUBLE = 268,
+	TWINT = 269,
+	TEQUALS = 270,
+	TEXTERN = 271,
+	TAND = 272,
+	TOPENBRACKET = 273,
+	TCLOSEBRACKET = 274,
+	TSTAR = 275,
+	TEND = 276,
+	TCOLON = 277,
+	TCOMMA = 278,
+	TWARRAY = 279,
+	arg = 280
+};
 #endif
 /* Tokens.  */
 #define TIDENTIFIER 258
@@ -109,34 +108,32 @@ extern int yydebug;
 #define arg 280
 
 /* Value type.  */
-#if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
+#if !defined YYSTYPE && !defined YYSTYPE_IS_DECLARED
 
-union YYSTYPE
-{
-#line 40 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1916  */
+union YYSTYPE {
+#	line 40 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1916  */
 
-    std::string *string;
-    NumberAST *number;
-    BlockAST *base;
-    BinOpAST *binOp;
-    AST *any;
-    FunctionAST *func;
-    std::vector<std::pair<std::string, llvm::Type *>> *args;
-    std::vector<Type *> *typeArgs;
-    std::vector<AST *> *valueArgs;
-    llvm::Type *type;
+	std::string* string;
+	NumberAST* number;
+	BlockAST* base;
+	BinOpAST* binOp;
+	AST* any;
+	FunctionAST* func;
+	std::vector<std::pair<std::string, llvm::Type*>>* args;
+	std::vector<Type*>* typeArgs;
+	std::vector<AST*>* valueArgs;
+	llvm::Type* type;
 
-#line 130 "parser.h" /* yacc.c:1916  */
+#	line 130 "parser.h" /* yacc.c:1916  */
 };
 
 typedef union YYSTYPE YYSTYPE;
-# define YYSTYPE_IS_TRIVIAL 1
-# define YYSTYPE_IS_DECLARED 1
+#	define YYSTYPE_IS_TRIVIAL 1
+#	define YYSTYPE_IS_DECLARED 1
 #endif
-
 
 extern YYSTYPE yylval;
 
-int yyparse (void);
+int yyparse(void);
 
 #endif /* !YY_YY_PARSER_H_INCLUDED  */

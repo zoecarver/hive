@@ -29,18 +29,21 @@ AllocaInst* CreateBlockAlloca(Function* func, std::string name, Type* type) {
 }
 
 Type* mapStructToType(Value* i) {
-//	mBuilder.CreateICmp()
-//	auto* index = dyn_cast<ConstantInt>(i);
-//	auto indexInt = index->getSExtValue();
-//
-//	if (indexInt == 0) return i32;
-//	if (indexInt == 1) return i8;
-//	if (indexInt == 2) return dType;
+	//	mBuilder.CreateICmp()
+	//	auto* index = dyn_cast<ConstantInt>(i);
+	//	auto indexInt = index->getSExtValue();
+	//
+	//	if (indexInt == 0) return i32;
+	//	if (indexInt == 1) return i8;
+	//	if (indexInt == 2) return dType;
 }
 
 Value* mapTypeToValue(Type* t) {
 	auto tID = t->getTypeID();
-	if (tID == i32->getTypeID()) return ConstantInt::get(mContext, APInt(8, 0));
-	if (tID == i8->getTypeID()) return ConstantInt::get(mContext, APInt(8, 1));
-	if (tID == dType->getTypeID()) return ConstantInt::get(mContext, APInt(8, 2));
+	if(tID == i32->getTypeID())
+		return ConstantInt::get(mContext, APInt(8, 0));
+	if(tID == i8->getTypeID())
+		return ConstantInt::get(mContext, APInt(8, 1));
+	if(tID == dType->getTypeID())
+		return ConstantInt::get(mContext, APInt(8, 2));
 }

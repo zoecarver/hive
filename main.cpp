@@ -3,10 +3,10 @@
 #include "ast/ast.h"
 #include "globals.h"
 
-#include <iostream>
 #include <fstream>
-#include <utility>
+#include <iostream>
 #include <llvm/Support/raw_ostream.h>
+#include <utility>
 
 extern FILE* yyin;
 extern FILE* zzin;

@@ -11,28 +11,17 @@ Value* BlockAST::codeGen() {
 	for(auto e : statements)
 		_ = e->codeGen();
 
-	return _;
+	return _; // its okay if this is null
 }
 
 std::string BlockAST::out() {
 	std::string outString;
 	llvm::raw_string_ostream rso(outString);
+
 	for(auto e : statements) {
 		e->codeGen()->print(rso);
 		outString += "\n";
 	}
-
-	return outString;
-}
-
-Value* WrapperAST::codeGen() {
-	return val;
-}
-
-std::string WrapperAST::out() {
-	std::string outString;
-	llvm::raw_string_ostream rso(outString);
-	this->codeGen()->print(rso);
 
 	return outString;
 }

@@ -5,16 +5,16 @@ target triple = "x86_64-apple-macosx10.14.0"
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
 define i32 @main() #0 {
-  %1 = alloca i32*, align 8
-  %2 = call i8* @malloc(i64 20)
-  %3 = bitcast i8* %2 to i32*
-  store i32* %3, i32** %1, align 8
-  %4 = load i32*, i32** %1, align 8
-  %5 = getelementptr inbounds i32, i32* %4, i64 0
-  store i32 1, i32* %5, align 4
-  %6 = load i32*, i32** %1, align 8
-  %7 = getelementptr inbounds i32, i32* %6, i64 3
-  store i32 6, i32* %7, align 4
+  %1 = alloca double*, align 8
+  %2 = call i8* @malloc(i64 40)
+  %3 = bitcast i8* %2 to double*
+  store double* %3, double** %1, align 8
+  %4 = load double*, double** %1, align 8
+  %5 = getelementptr inbounds double, double* %4, i64 0
+  store double 1.000000e+00, double* %5, align 8
+  %6 = load double*, double** %1, align 8
+  %7 = getelementptr inbounds double, double* %6, i64 3
+  store double 6.000000e+00, double* %7, align 8
   ret i32 0
 }
 

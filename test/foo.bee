@@ -15,5 +15,8 @@ def main int a
     x = if (1) 5.0 else 2.0 end
     x = add(x, 2.0)
 
+    arr = [1.0, 2.0, 3.0, 4.0]
+    printd(arr[1])
+
     simple(x)
 end

@@ -26,13 +26,3 @@ public:
 	Value* codeGen() override;
 	std::string out() override;
 };
-
-class WrapperAST : public AST {
-	Value* val;
-
-public:
-	WrapperAST(Value* val)
-		: val(val) {}
-	Value* codeGen() override;
-	std::string out() override;
-};
