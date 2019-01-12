@@ -1,22 +1,26 @@
 extern print(int)
-extern printd(double)
+   extern printd(double)
 
-def add double a, double b -> double
-    a + b
-end
+   def add double a, double b -> double
+       a + b
+   end
 
-def simple double i
-    printd(i)
-end
+   def simple double i
+       printd(i)
+   end
 
-def main int a
-    if (a) print(2) else print(4) end
+   def main int a
+       if (a) print(2) else print(4) end
 
-    x = if (1) 5.0 else 2.0 end
-    x = add(x, 2.0)
+       x = if (1) 5.0 else 2.0 end
+       x = add(x, 2.0)
 
-    arr = [1.0, 2.0, 3.0, 4.0]
-    printd(arr[1])
+       arr = [1.0, 2.0, 3.0, 4.0]
+       printd(arr[1])
 
-    simple(x)
-end
+       ptr = x&
+       printd(ptr*)
+       printd(ptr[0])
+
+       simple(x)
+   end

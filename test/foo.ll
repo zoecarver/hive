@@ -25,6 +25,7 @@ entry:
 
 define i8 @main(i32 %a) {
 entry:
+  %ptr = alloca double*
   %arr = alloca double*
   %x = alloca double
   %0 = sitofp i32 %a to double
@@ -70,8 +71,16 @@ end3:                                             ; preds = %else2, %then1
   %12 = getelementptr double, double* %11, i32 1
   %13 = load double, double* %12
   %14 = call i8 @printd(double %13)
-  %15 = load double, double* %x
-  %16 = call i8 @simple(double %15)
-  ret i8 %16
+  store double* %x, double** %ptr
+  %15 = load double*, double** %ptr
+  %16 = load double, double* %15
+  %17 = call i8 @printd(double %16)
+  %18 = load double*, double** %ptr
+  %19 = getelementptr double, double* %18, i32 0
+  %20 = load double, double* %19
+  %21 = call i8 @printd(double %20)
+  %22 = load double, double* %x
+  %23 = call i8 @simple(double %22)
+  ret i8 %23
 }
 

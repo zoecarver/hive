@@ -1,6 +1,6 @@
 # Hive
 
-Hive is a toy language I have been working on. It uses flex and bison for lexing and parsing. It uses LLVM to generate IR code which can be compiled with clang. 
+Hive is a low level, typesafe, toy language with similar syntax to python or lua. It uses flex and bison for lexing and parsing. It uses LLVM to generate IR code which can be compiled with clang. 
 
 ## Install
 
@@ -65,6 +65,10 @@ def main int a
     arr = [1.0, 2.0, 3.0, 4.0]
     printd(arr[1])
 
+    ptr = x&
+    printd(ptr*)
+    printd(ptr[0])
+
     simple(x)
 end
 ```
@@ -82,3 +86,23 @@ Arrays are simply pointers.
 * array must be of the same time
 * currently arrays are of a fixed size (this will change)
 * see syntax above
+
+### Types
+
+#### Array
+
+Because arrays are just pointers: `int*`
+
+#### Numbers
+
+`int`, `double`
+
+`1`, `1.0`
+
+#### Functions
+
+`def`, `def (int) -> int`
+
+### Pointers & Refrences
+
+`value*` and `value&` respectivly. You can also use subscripting (`ptr[0]`).
