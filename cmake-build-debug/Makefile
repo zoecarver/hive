@@ -176,6 +176,33 @@ ast/BinOp/ast.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ast/BinOp/ast.cpp.s
 .PHONY : ast/BinOp/ast.cpp.s
 
+ast/ControlFlow/ast.o: ast/ControlFlow/ast.cpp.o
+
+.PHONY : ast/ControlFlow/ast.o
+
+# target to build an object file
+ast/ControlFlow/ast.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.o
+.PHONY : ast/ControlFlow/ast.cpp.o
+
+ast/ControlFlow/ast.i: ast/ControlFlow/ast.cpp.i
+
+.PHONY : ast/ControlFlow/ast.i
+
+# target to preprocess a source file
+ast/ControlFlow/ast.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.i
+.PHONY : ast/ControlFlow/ast.cpp.i
+
+ast/ControlFlow/ast.s: ast/ControlFlow/ast.cpp.s
+
+.PHONY : ast/ControlFlow/ast.s
+
+# target to generate assembly for a file
+ast/ControlFlow/ast.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.s
+.PHONY : ast/ControlFlow/ast.cpp.s
+
 ast/Functions/ast.o: ast/Functions/ast.cpp.o
 
 .PHONY : ast/Functions/ast.o
@@ -460,6 +487,9 @@ help:
 	@echo "... ast/BinOp/ast.o"
 	@echo "... ast/BinOp/ast.i"
 	@echo "... ast/BinOp/ast.s"
+	@echo "... ast/ControlFlow/ast.o"
+	@echo "... ast/ControlFlow/ast.i"
+	@echo "... ast/ControlFlow/ast.s"
 	@echo "... ast/Functions/ast.o"
 	@echo "... ast/Functions/ast.i"
 	@echo "... ast/Functions/ast.s"

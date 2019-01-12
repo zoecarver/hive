@@ -3,6 +3,7 @@
 #include "../ast/BinOp/ast.h"
 #include "../ast/Functions/ast.h"
 #include "../ast/Variables/ast.h"
+#include "../ast/ControlFlow/ast.h"
 #include "../ast/ast.h"
 #include "../globals.h"
 
@@ -50,11 +51,11 @@ BlockAST *res;
     llvm::Type *type;
 }
 
-%token <string> TIDENTIFIER TINT TBINOP TOPENPAREN TCLOSEPAREN TOPENBRACE TCLOSEBRACE TFUNC TVAR TCAST TWDOUBLE TWINT TEQUALS TEXTERN TAND TOPENBRACKET TCLOSEBRACKET TSTAR TEND TCOLON TCOMMA TWARRAY
+%token <string> TIDENTIFIER TINT TBINOP TOPENPAREN TCLOSEPAREN TOPENBRACE TCLOSEBRACE TFUNC TVAR TCAST TWDOUBLE TWINT TEQUALS TEXTERN TAND TOPENBRACKET TCLOSEBRACKET TSTAR TEND TCOLON TCOMMA TWARRAY TIF TELSE TTHEN TFP
 %token <args> arg
 
-%type <any> constExpr func var cast extern call array varArray
-%type <base> program statments
+%type <any> constExpr func var cast extern call array varArray ifStatement
+%type <base> program statments optionalElseStatement
 %type <args> funcArgs optionalArgParens
 %type <typeArgs> typeArgs optionalTypeArgParens
 %type <type> type
@@ -70,7 +71,8 @@ BlockAST *res;
     statments : constExpr { $$ = new BlockAST(); $$->statements.push_back($<any>1); }
     | statments constExpr { $1->statements.push_back($<any>2); }
           ;
-    constExpr : TINT { $$ = new NumberAST(std::stoi(*$1)); }
+    constExpr : TINT { $$ = new NumberAST(std::stoi(*$1), i32); }
+    | TFP { $$ = new NumberAST(std::stoi(*$1), dType); }
     | func { $$ = $<any>1; }
     | var { $$ = $<any>1; }
     | cast { $$ = $<any>1; }
@@ -86,6 +88,7 @@ BlockAST *res;
     | TIDENTIFIER TAND { $$ = new VariableGetAST(*$<string>1, true); }
     | TOPENPAREN constExpr TCLOSEPAREN { $$ = $2; }
     | varArray { $$ = $<any>1; }
+    | ifStatement { $$ = $1; }
     | { $$ = 0; }
           ;
     var         : TIDENTIFIER TEQUALS constExpr varType {
@@ -189,4 +192,14 @@ BlockAST *res;
         $$ = new PrototypeAST(*$<string>2, *$<typeArgs>4, $<type>6);
     }
           ;
+    ifStatement	: TIF TOPENPAREN constExpr TCLOSEPAREN statments optionalElseStatement {
+	$$ = new IfAST($3, $5, $6);
+    }
+    optionalElseStatement : TELSE statments TEND {
+	$$ = $<base>2;
+    }
+    | TEND {
+    	$$ = nullptr;
+    }
+
 %%

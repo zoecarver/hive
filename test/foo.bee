@@ -1,12 +1,17 @@
 extern print(int)
-extern filter(int*, int, def (int) -> int) -> int*
+extern print(double)
+# extern filter(int*, int, def (int) -> int) -> int*
 
-def isone int x -> int
-    x - 1
+# def callme (def f)
+#     f()
+# end
+
+def simple int i
+    print(i)
 end
 
 def main int a
-    tofilter = [1, 0, 1, 2, 6, 0]
-    filtered = filter(tofilter, 6, isone) # 6 is the size of the array
-    # print(filtered[1])
+    a = 1
+    if (0) print(2) else print(4) end
+    simple(5)
 end

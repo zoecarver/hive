@@ -6,13 +6,13 @@
 
 using namespace llvm;
 
-// template <typename T>
 class NumberAST : public AST {
-	int val; //T val;
+	double val;
+	Type* type;
 
 public:
-	NumberAST(int val)
-		: val(val) {}
+	NumberAST(double val, Type* type)
+		: val(val), type(type) {}
 	Value* codeGen() override;
 	std::string out() override;
 };

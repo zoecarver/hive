@@ -46,12 +46,13 @@ extern int yydebug;
 #include "../ast/BinOp/ast.h"
 #include "../ast/Functions/ast.h"
 #include "../ast/Variables/ast.h"
+#include "../ast/ControlFlow/ast.h"
 #include "../ast/ast.h"
 #include "../globals.h"
 
 #include "llvm/IR/Constants.h"
 
-#line 55 "parser.h" /* yacc.c:1916  */
+#line 56 "parser.h" /* yacc.c:1916  */
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
@@ -80,7 +81,11 @@ extern int yydebug;
     TCOLON = 277,
     TCOMMA = 278,
     TWARRAY = 279,
-    arg = 280
+    TIF = 280,
+    TELSE = 281,
+    TTHEN = 282,
+    TFP = 283,
+    arg = 284
   };
 #endif
 /* Tokens.  */
@@ -106,14 +111,18 @@ extern int yydebug;
 #define TCOLON 277
 #define TCOMMA 278
 #define TWARRAY 279
-#define arg 280
+#define TIF 280
+#define TELSE 281
+#define TTHEN 282
+#define TFP 283
+#define arg 284
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 
 union YYSTYPE
 {
-#line 40 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1916  */
+#line 41 "/Users/zoe/Developer/hive/hive/parser/parser.y" /* yacc.c:1916  */
 
     std::string *string;
     NumberAST *number;
@@ -126,7 +135,7 @@ union YYSTYPE
     std::vector<AST *> *valueArgs;
     llvm::Type *type;
 
-#line 130 "parser.h" /* yacc.c:1916  */
+#line 139 "parser.h" /* yacc.c:1916  */
 };
 
 typedef union YYSTYPE YYSTYPE;

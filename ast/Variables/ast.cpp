@@ -79,7 +79,10 @@ Value* VariableGetAST::codeGen() {
 }
 
 Value* CastAST::codeGen() {
-	Value* loadAlloca = mBuilder.CreateLoad(namedVariables[name]);
+    Value* V = namedVariables[name];
+    if (V == nullptr) V = namedArgs[name];
+
+	Value* loadAlloca = mBuilder.CreateLoad(V);
 	Instruction* castInst = new BitCastInst(loadAlloca, PointerType::getUnqual(to));
 	mBuilder.Insert(castInst);
 

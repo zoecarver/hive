@@ -24,11 +24,11 @@ ID       [a-z][a-z0-9]*
 %%
 
 {DIGIT}+ {
-              SAVE_TOKEN; return TINT;
+  SAVE_TOKEN; return TINT;
 }
 
 {DIGIT}+"."{DIGIT}* {
-              SAVE_TOKEN; return TINT; // TFP;
+  SAVE_TOKEN; return TFP;
 }
 
 "," {
@@ -102,7 +102,19 @@ ID       [a-z][a-z0-9]*
 
 "+"|"-"|TSTAR|"/" {
   SAVE_TOKEN; return TBINOP;
-} 
+}
+
+"if" {
+  SAVE_TOKEN; return TIF;
+}
+
+"else" {
+  SAVE_TOKEN; return TELSE;
+}
+
+"then" {
+  SAVE_TOKEN; return TTHEN;
+}
 
 "=" {
   SAVE_TOKEN; return TEQUALS;

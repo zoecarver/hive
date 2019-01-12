@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/ast/BinOp/ast.cpp.o"
   "CMakeFiles/main.dir/ast/Functions/ast.cpp.o"
   "CMakeFiles/main.dir/ast/Variables/ast.cpp.o"
+  "CMakeFiles/main.dir/ast/ControlFlow/ast.cpp.o"
   "CMakeFiles/main.dir/parser.cpp.o"
   "CMakeFiles/main.dir/tokens.cpp.o"
   "CMakeFiles/main.dir/preparser.cpp.o"

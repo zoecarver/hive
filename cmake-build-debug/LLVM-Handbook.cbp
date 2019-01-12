@@ -122,6 +122,12 @@
 		<Unit filename="/Users/zoe/Developer/hive/hive/ast/BinOp/ast.h">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/ControlFlow/ast.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/ControlFlow/ast.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/Users/zoe/Developer/hive/hive/ast/Functions/ast.cpp">
 			<Option target="main"/>
 		</Unit>
@@ -152,10 +158,16 @@
 		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp.rule">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/preparser.cpp">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/preparser.cpp.rule">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/preparser.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/pretokens.cpp">

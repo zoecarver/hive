@@ -28,34 +28,34 @@ The CXX compiler identification is AppleClang, found in "/Users/zoe/Developer/hi
 Determining if the C compiler works passed with the following output:
 Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_29fae/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_29fae.dir/build.make CMakeFiles/cmTC_29fae.dir/build
+Run Build Command:"/usr/local/bin/gmake" "cmTC_2ceb8/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_2ceb8.dir/build.make CMakeFiles/cmTC_2ceb8.dir/build
 gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_29fae.dir/testCCompiler.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_29fae.dir/testCCompiler.c.o   -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_29fae
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29fae.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_29fae.dir/testCCompiler.c.o  -o cmTC_29fae 
+Building C object CMakeFiles/cmTC_2ceb8.dir/testCCompiler.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_2ceb8.dir/testCCompiler.c.o   -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_2ceb8
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ceb8.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_2ceb8.dir/testCCompiler.c.o  -o cmTC_2ceb8 
 gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_8c32b/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_8c32b.dir/build.make CMakeFiles/cmTC_8c32b.dir/build
+Run Build Command:"/usr/local/bin/gmake" "cmTC_723f3/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_723f3.dir/build.make CMakeFiles/cmTC_723f3.dir/build
 gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8c32b.dir/CMakeCCompilerABI.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_8c32b.dir/CMakeCCompilerABI.c.o   -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_8c32b
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c32b.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_8c32b.dir/CMakeCCompilerABI.c.o  -o cmTC_8c32b 
+Building C object CMakeFiles/cmTC_723f3.dir/CMakeCCompilerABI.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_723f3.dir/CMakeCCompilerABI.c.o   -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_723f3
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_723f3.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_723f3.dir/CMakeCCompilerABI.c.o  -o cmTC_723f3 
 Apple LLVM version 10.0.0 (clang-1000.10.44.4)
 Target: x86_64-apple-darwin18.2.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 Found CUDA installation: /usr/local/cuda, version unknown
- "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_8c32b -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8c32b.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_723f3 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_723f3.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-409.12
 BUILD 17:47:51 Sep 25 2018
 configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -70,20 +70,20 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/local/bin/gmake" "cmTC_8c32b/fast"]
-  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_8c32b.dir/build.make CMakeFiles/cmTC_8c32b.dir/build]
+  ignore line: [Run Build Command:"/usr/local/bin/gmake" "cmTC_723f3/fast"]
+  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_723f3.dir/build.make CMakeFiles/cmTC_723f3.dir/build]
   ignore line: [gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_8c32b.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_8c32b.dir/CMakeCCompilerABI.c.o   -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_8c32b]
-  ignore line: [/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c32b.dir/link.txt --verbose=1]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_8c32b.dir/CMakeCCompilerABI.c.o  -o cmTC_8c32b ]
+  ignore line: [Building C object CMakeFiles/cmTC_723f3.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_723f3.dir/CMakeCCompilerABI.c.o   -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_723f3]
+  ignore line: [/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_723f3.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_723f3.dir/CMakeCCompilerABI.c.o  -o cmTC_723f3 ]
   ignore line: [Apple LLVM version 10.0.0 (clang-1000.10.44.4)]
   ignore line: [Target: x86_64-apple-darwin18.2.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
   ignore line: [Found CUDA installation: /usr/local/cuda, version unknown]
-  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_8c32b -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8c32b.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_723f3 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_723f3.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
     arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -96,11 +96,11 @@ Parsed C implicit link information from above output:
     arg [-syslibroot] ==> ignore
     arg [/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_8c32b] ==> ignore
+    arg [cmTC_723f3] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_8c32b.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_723f3.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lSystem] ==> lib [System]
     arg [/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
   Library search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib]
@@ -119,14 +119,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_88ac8/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_88ac8.dir/build.make CMakeFiles/cmTC_88ac8.dir/build
+Run Build Command:"/usr/local/bin/gmake" "cmTC_89e80/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_89e80.dir/build.make CMakeFiles/cmTC_89e80.dir/build
 gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_88ac8.dir/feature_tests.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c11 -o CMakeFiles/cmTC_88ac8.dir/feature_tests.c.o   -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_88ac8
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88ac8.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_88ac8.dir/feature_tests.c.o  -o cmTC_88ac8 
+Building C object CMakeFiles/cmTC_89e80.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c11 -o CMakeFiles/cmTC_89e80.dir/feature_tests.c.o   -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_89e80
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89e80.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_89e80.dir/feature_tests.c.o  -o cmTC_89e80 
 gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -139,14 +139,14 @@ gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CM
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_3536c/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_3536c.dir/build.make CMakeFiles/cmTC_3536c.dir/build
+Run Build Command:"/usr/local/bin/gmake" "cmTC_90c34/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_90c34.dir/build.make CMakeFiles/cmTC_90c34.dir/build
 gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3536c.dir/feature_tests.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c99 -o CMakeFiles/cmTC_3536c.dir/feature_tests.c.o   -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_3536c
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3536c.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_3536c.dir/feature_tests.c.o  -o cmTC_3536c 
+Building C object CMakeFiles/cmTC_90c34.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c99 -o CMakeFiles/cmTC_90c34.dir/feature_tests.c.o   -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_90c34
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90c34.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_90c34.dir/feature_tests.c.o  -o cmTC_90c34 
 gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -159,14 +159,14 @@ gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CM
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_891a5/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_891a5.dir/build.make CMakeFiles/cmTC_891a5.dir/build
+Run Build Command:"/usr/local/bin/gmake" "cmTC_54808/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_54808.dir/build.make CMakeFiles/cmTC_54808.dir/build
 gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_891a5.dir/feature_tests.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c90 -o CMakeFiles/cmTC_891a5.dir/feature_tests.c.o   -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_891a5
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_891a5.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_891a5.dir/feature_tests.c.o  -o cmTC_891a5 
+Building C object CMakeFiles/cmTC_54808.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c90 -o CMakeFiles/cmTC_54808.dir/feature_tests.c.o   -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_54808
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54808.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_54808.dir/feature_tests.c.o  -o cmTC_54808 
 gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -177,34 +177,34 @@ gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CM
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_2ac54/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_2ac54.dir/build.make CMakeFiles/cmTC_2ac54.dir/build
+Run Build Command:"/usr/local/bin/gmake" "cmTC_1aac3/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_1aac3.dir/build.make CMakeFiles/cmTC_1aac3.dir/build
 gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2ac54.dir/testCXXCompiler.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_2ac54.dir/testCXXCompiler.cxx.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_2ac54
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ac54.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_2ac54.dir/testCXXCompiler.cxx.o  -o cmTC_2ac54 
+Building CXX object CMakeFiles/cmTC_1aac3.dir/testCXXCompiler.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_1aac3.dir/testCXXCompiler.cxx.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_1aac3
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1aac3.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_1aac3.dir/testCXXCompiler.cxx.o  -o cmTC_1aac3 
 gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_d2289/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_d2289.dir/build.make CMakeFiles/cmTC_d2289.dir/build
+Run Build Command:"/usr/local/bin/gmake" "cmTC_b12f8/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_b12f8.dir/build.make CMakeFiles/cmTC_b12f8.dir/build
 gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d2289.dir/CMakeCXXCompilerABI.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_d2289.dir/CMakeCXXCompilerABI.cpp.o -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_d2289
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2289.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_d2289.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d2289 
+Building CXX object CMakeFiles/cmTC_b12f8.dir/CMakeCXXCompilerABI.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_b12f8.dir/CMakeCXXCompilerABI.cpp.o -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_b12f8
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b12f8.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_b12f8.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_b12f8 
 Apple LLVM version 10.0.0 (clang-1000.10.44.4)
 Target: x86_64-apple-darwin18.2.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 Found CUDA installation: /usr/local/cuda, version unknown
- "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_d2289 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_d2289.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_b12f8 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_b12f8.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-409.12
 BUILD 17:47:51 Sep 25 2018
 configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -219,20 +219,20 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/local/bin/gmake" "cmTC_d2289/fast"]
-  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_d2289.dir/build.make CMakeFiles/cmTC_d2289.dir/build]
+  ignore line: [Run Build Command:"/usr/local/bin/gmake" "cmTC_b12f8/fast"]
+  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_b12f8.dir/build.make CMakeFiles/cmTC_b12f8.dir/build]
   ignore line: [gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_d2289.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_d2289.dir/CMakeCXXCompilerABI.cpp.o -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_d2289]
-  ignore line: [/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2289.dir/link.txt --verbose=1]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_d2289.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d2289 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_b12f8.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_b12f8.dir/CMakeCXXCompilerABI.cpp.o -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_b12f8]
+  ignore line: [/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b12f8.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_b12f8.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_b12f8 ]
   ignore line: [Apple LLVM version 10.0.0 (clang-1000.10.44.4)]
   ignore line: [Target: x86_64-apple-darwin18.2.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
   ignore line: [Found CUDA installation: /usr/local/cuda, version unknown]
-  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_d2289 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_d2289.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -o cmTC_b12f8 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_b12f8.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
     arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -245,11 +245,11 @@ Parsed CXX implicit link information from above output:
     arg [-syslibroot] ==> ignore
     arg [/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_d2289] ==> ignore
+    arg [cmTC_b12f8] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_d2289.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_b12f8.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lc++] ==> lib [c++]
     arg [-lSystem] ==> lib [System]
     arg [/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
@@ -269,14 +269,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_8275b/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_8275b.dir/build.make CMakeFiles/cmTC_8275b.dir/build
+Run Build Command:"/usr/local/bin/gmake" "cmTC_8a332/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_8a332.dir/build.make CMakeFiles/cmTC_8a332.dir/build
 gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8275b.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++1z -o CMakeFiles/cmTC_8275b.dir/feature_tests.cxx.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_8275b
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8275b.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_8275b.dir/feature_tests.cxx.o  -o cmTC_8275b 
+Building CXX object CMakeFiles/cmTC_8a332.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++1z -o CMakeFiles/cmTC_8a332.dir/feature_tests.cxx.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_8a332
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a332.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_8a332.dir/feature_tests.cxx.o  -o cmTC_8a332 
 gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -342,14 +342,14 @@ gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CM
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_850a2/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_850a2.dir/build.make CMakeFiles/cmTC_850a2.dir/build
+Run Build Command:"/usr/local/bin/gmake" "cmTC_4600f/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_4600f.dir/build.make CMakeFiles/cmTC_4600f.dir/build
 gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_850a2.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++14 -o CMakeFiles/cmTC_850a2.dir/feature_tests.cxx.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_850a2
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_850a2.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_850a2.dir/feature_tests.cxx.o  -o cmTC_850a2 
+Building CXX object CMakeFiles/cmTC_4600f.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++14 -o CMakeFiles/cmTC_4600f.dir/feature_tests.cxx.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_4600f
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4600f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_4600f.dir/feature_tests.cxx.o  -o cmTC_4600f 
 gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -415,14 +415,14 @@ gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CM
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_67eee/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_67eee.dir/build.make CMakeFiles/cmTC_67eee.dir/build
+Run Build Command:"/usr/local/bin/gmake" "cmTC_79707/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_79707.dir/build.make CMakeFiles/cmTC_79707.dir/build
 gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_67eee.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++11 -o CMakeFiles/cmTC_67eee.dir/feature_tests.cxx.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_67eee
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67eee.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_67eee.dir/feature_tests.cxx.o  -o cmTC_67eee 
+Building CXX object CMakeFiles/cmTC_79707.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++11 -o CMakeFiles/cmTC_79707.dir/feature_tests.cxx.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_79707
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79707.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_79707.dir/feature_tests.cxx.o  -o cmTC_79707 
 gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -488,14 +488,14 @@ gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CM
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_28d38/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_28d38.dir/build.make CMakeFiles/cmTC_28d38.dir/build
+Run Build Command:"/usr/local/bin/gmake" "cmTC_24c6d/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_24c6d.dir/build.make CMakeFiles/cmTC_24c6d.dir/build
 gmake[1]: Entering directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_28d38.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++98 -o CMakeFiles/cmTC_28d38.dir/feature_tests.cxx.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_28d38
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28d38.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_28d38.dir/feature_tests.cxx.o  -o cmTC_28d38 
+Building CXX object CMakeFiles/cmTC_24c6d.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=c++98 -o CMakeFiles/cmTC_24c6d.dir/feature_tests.cxx.o -c /Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_24c6d
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24c6d.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_24c6d.dir/feature_tests.cxx.o  -o cmTC_24c6d 
 gmake[1]: Leaving directory '/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 

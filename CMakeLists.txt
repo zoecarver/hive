@@ -40,6 +40,7 @@ set(SOURCES
   ast/BinOp/ast.cpp
   ast/Functions/ast.cpp
   ast/Variables/ast.cpp
+  ast/ControlFlow/ast.cpp
 
   # Parser / Lexer
   lexer/tokens.l
@@ -63,6 +64,7 @@ set(HEADERS
   ast/BinOp/ast.h
   ast/Functions/ast.h
   ast/Variables/ast.h
+  ast/ControlFlow/ast.h
 )
 
 

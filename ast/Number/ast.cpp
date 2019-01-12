@@ -11,9 +11,9 @@ using namespace llvm;
 extern LLVMContext mContext;
 
 Value* NumberAST::codeGen() {
-	// if constexpr (std::is_same<T, float> || std::is_same<T, double>)
-	//   return ConstantFP::get(mContext, APFloat((double) val));
-	return ConstantInt::get(mContext, APInt(32, val));
+	 if (type->isDoubleTy())
+	   return ConstantFP::get(mContext, APFloat(val));
+	return ConstantInt::get(mContext, APInt(32, (uint64_t)val));
 }
 
 std::string NumberAST::out() {

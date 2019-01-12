@@ -50,16 +50,45 @@ Value* FunctionAST::codeGen() {
 }
 
 Value* CallAST::codeGen() {
+	int funcOverloadCount = 0;
+	auto baseName = name;
+
+start:
+	std::cout << "function name:" << name << std::endl;
 	Function* func = mModule->getFunction(name);
+	std::cout << "function ptr:" << func << std::endl;
 	if (!func) { // also search other places
 		auto* funcPtr = namedArgs[name];
-		func = (Function *)mBuilder.CreateLoad(funcPtr);
+		funcPtr->print(errs());
+		std::cout << "\n";
+		Value* loadedFunc = mBuilder.CreateLoad(funcPtr);
+		func = llvm::cast<Function>(loadedFunc);
+        func->print(errs());
+        std::cout << "\n";
 	}
 	// TODO: also search namedVariables
 
 	std::vector<Value*> argsV;
 	for(auto* e : args)
 		argsV.push_back(e->codeGen());
+
+	// search the args to make sure we have the write overload
+	auto typeIndex = 0;
+	while (true) {
+		auto* currentType = func->getFunctionType()->getContainedType(typeIndex);
+		if (currentType == nullptr || currentType == nullptr) break;
+
+		auto argTypeId = argsV[typeIndex]->getType()->getTypeID();
+		auto funcTypeId = currentType->getTypeID();
+
+		if (argTypeId != funcTypeId) {
+			funcOverloadCount++;
+			name = baseName + "_" + std::to_string(funcOverloadCount);
+			goto start;
+		}
+
+		typeIndex++;
+	}
 
 	return mBuilder.CreateCall(func, argsV);
 }
@@ -79,6 +108,14 @@ Type *FunctionTypeHelper::codeGen() {
 
 Value* PrototypeAST::codeGen() {
 	FunctionType* FT = FunctionType::get(returnType, argTypes, false);
+
+	auto baseName = name;
+	int overloadCount = 1;
+	while (mModule->getFunction(name) != nullptr) {
+		name = baseName + "_" + std::to_string(overloadCount);
+		overloadCount++;
+	}
+
 	Function* func = Function::Create(FT, Function::ExternalLinkage, name, mModule.get());
 	currentFunc = func;
 	return func;
