@@ -1,5 +1,0 @@
-/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/main.dir
-/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/Parser.dir
-/Users/zoe/Developer/hive/hive/cmake-build-debug/CMakeFiles/intrinsics_gen.dir
