@@ -4,18 +4,33 @@ target datalayout = "e-m:o-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-apple-macosx10.14.0"
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define i32 @main() #0 {
-  %1 = alloca double*, align 8
-  %2 = call i8* @malloc(i64 40)
-  %3 = bitcast i8* %2 to double*
-  store double* %3, double** %1, align 8
-  %4 = load double*, double** %1, align 8
-  %5 = getelementptr inbounds double, double* %4, i64 0
-  store double 1.000000e+00, double* %5, align 8
-  %6 = load double*, double** %1, align 8
-  %7 = getelementptr inbounds double, double* %6, i64 3
-  store double 6.000000e+00, double* %7, align 8
-  ret i32 0
+define i32 @main(i32) #0 {
+  %2 = alloca i32, align 4
+  %3 = alloca i32, align 4
+  %4 = alloca double*, align 8
+  %5 = alloca double*, align 8
+  %6 = alloca double*, align 8
+  store i32 0, i32* %2, align 4
+  store i32 %0, i32* %3, align 4
+  store double* null, double** %4, align 8
+  %7 = load i32, i32* %3, align 4
+  %8 = icmp ne i32 %7, 0
+  br i1 %8, label %9, label %12
+
+; <label>:9:                                      ; preds = %1
+  %10 = call i8* @malloc(i64 40)
+  %11 = bitcast i8* %10 to double*
+  store double* %11, double** %5, align 8
+  br label %15
+
+; <label>:12:                                     ; preds = %1
+  %13 = call i8* @malloc(i64 80)
+  %14 = bitcast i8* %13 to double*
+  store double* %14, double** %6, align 8
+  br label %15
+
+; <label>:15:                                     ; preds = %12, %9
+  ret i32 8
 }
 
 declare i8* @malloc(i64) #1

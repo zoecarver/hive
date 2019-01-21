@@ -1,4 +1,4 @@
-
+%array_type = type { i32, double* }
 declare i8* @malloc(i32)
 
 declare i8 @free(i8*)
@@ -26,7 +26,8 @@ entry:
 define i8 @main(i32 %a) {
 entry:
   %ptr = alloca double*
-  %arr = alloca double*
+  %arr = alloca %array_type*
+  %tmp_struct = alloca %array_type
   %x = alloca double
   %0 = sitofp i32 %a to double
   %ifcond = fcmp one double %0, 0.000000e+00
@@ -66,21 +67,27 @@ end3:                                             ; preds = %else2, %then1
   store double 3.000000e+00, double* %9
   %10 = getelementptr double, double* %6, i32 3
   store double 4.000000e+00, double* %10
-  store double* %6, double** %arr
-  %11 = load double*, double** %arr
-  %12 = getelementptr double, double* %11, i32 1
-  %13 = load double, double* %12
-  %14 = call i8 @printd(double %13)
+  %11 = getelementptr %array_type, %array_type* %tmp_struct, i32 0, i32 0
+  store i32 32, i32* %11
+  %12 = getelementptr %array_type, %array_type* %tmp_struct, i32 0, i32 1
+  store double* %6, double** %12
+  store %array_type* %tmp_struct, %array_type** %arr
+  %13 = load %array_type*, %array_type** %arr
+  %14 = getelementptr %array_type, %array_type* %13, i32 0
+  %15 = getelementptr %array_type, %array_type* %14, i32 1
+  %16 = load %array_type, %array_type* %15
+  %17 = call i8 @printd(%array_type %16)
   store double* %x, double** %ptr
-  %15 = load double*, double** %ptr
-  %16 = load double, double* %15
-  %17 = call i8 @printd(double %16)
   %18 = load double*, double** %ptr
-  %19 = getelementptr double, double* %18, i32 0
-  %20 = load double, double* %19
-  %21 = call i8 @printd(double %20)
-  %22 = load double, double* %x
-  %23 = call i8 @simple(double %22)
-  ret i8 %23
+  %19 = load double, double* %18
+  %20 = call i8 @printd(double %19)
+  %21 = load double*, double** %ptr
+  %22 = getelementptr double, double* %21, i32 0
+  %23 = getelementptr double, double* %22, i32 0
+  %24 = load double, double* %23
+  %25 = call i8 @printd(double %24)
+  %26 = load double, double* %x
+  %27 = call i8 @simple(double %26)
+  ret i8 %27
 }
 

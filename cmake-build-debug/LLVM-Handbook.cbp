@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="LLVM-Handbook"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\opt\;CMake Files\..\..\..\..\..\usr\local\opt\llvm@6\;CMake Files\..\..\..\..\..\usr\local\opt\llvm@6\lib\;CMake Files\..\..\..\..\..\usr\local\opt\llvm@6\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\opt\llvm@6\lib\cmake\llvm\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/zoe/Developer/hive/hive/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/zoe/Developer/hive/hive/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/zoe/Developer/hive/hive/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main">
+				<Option output="/Users/zoe/Developer/hive/hive/cmake-build-debug/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zoe/Developer/hive/hive/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DYY_NO_UNISTD_H"/>
+					<Add option="-D_SCL_SECURE_NO_WARNINGS"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add option="-D_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS"/>
+					<Add directory="/Users/zoe/Developer/hive/hive"/>
+					<Add directory="/Users/zoe/Developer/hive/hive/cmake-build-debug"/>
+					<Add directory="/usr/local/Cellar/llvm/6.0.0/include"/>
+					<Add directory="."/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 main"/>
+					<CompileFile command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main/fast">
+				<Option output="/Users/zoe/Developer/hive/hive/cmake-build-debug/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zoe/Developer/hive/hive/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DYY_NO_UNISTD_H"/>
+					<Add option="-D_SCL_SECURE_NO_WARNINGS"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add option="-D_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS"/>
+					<Add directory="/Users/zoe/Developer/hive/hive"/>
+					<Add directory="/Users/zoe/Developer/hive/hive/cmake-build-debug"/>
+					<Add directory="/usr/local/Cellar/llvm/6.0.0/include"/>
+					<Add directory="."/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 main/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Parser">
+				<Option working_dir="/Users/zoe/Developer/hive/hive/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 Parser"/>
+					<CompileFile command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="intrinsics_gen">
+				<Option working_dir="/Users/zoe/Developer/hive/hive/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 intrinsics_gen"/>
+					<CompileFile command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j8 -f &quot;/Users/zoe/Developer/hive/hive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/BinOp/ast.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/BinOp/ast.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/ControlFlow/ast.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/ControlFlow/ast.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/Functions/ast.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/Functions/ast.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/Number/ast.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/Number/ast.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/Variables/ast.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/Variables/ast.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/ast.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/ast/ast.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.cpp.rule">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/parser.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/cmake-build-debug/tokens.cpp.rule">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/globals.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/globals.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/lexer/tokens.l">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/main.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/main.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/parser/parser.y">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/../../../../../usr/local/opt/llvm@6/lib/cmake/llvm/LLVM-Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\opt\llvm@6\lib\cmake\llvm\"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/../../../../../usr/local/opt/llvm@6/lib/cmake/llvm/LLVMConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\opt\llvm@6\lib\cmake\llvm\"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/../../../../../usr/local/opt/llvm@6/lib/cmake/llvm/LLVMConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\opt\llvm@6\lib\cmake\llvm\"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/../../../../../usr/local/opt/llvm@6/lib/cmake/llvm/LLVMExports-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\opt\llvm@6\lib\cmake\llvm\"/>
+		</Unit>
+		<Unit filename="/Users/zoe/Developer/hive/hive/../../../../../usr/local/opt/llvm@6/lib/cmake/llvm/LLVMExports.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\opt\llvm@6\lib\cmake\llvm\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

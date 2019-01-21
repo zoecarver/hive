@@ -12,6 +12,7 @@ IRBuilder<> mBuilder(mContext);
 std::unique_ptr<Module> mModule = llvm::make_unique<Module>("foo", mContext);
 std::map<std::string, AllocaInst*> namedVariables;
 std::map<std::string, Value*> namedArgs;
+std::vector<Type*> globalTypes;
 Function* currentFunc;
 
 Type* i32 = IntegerType::get(mContext, 32);

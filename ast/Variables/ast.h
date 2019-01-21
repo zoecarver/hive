@@ -84,8 +84,20 @@ class ArrayGetAST : public AST {
 
 public:
 	ArrayGetAST(std::string arrayName, AST* index)
-		: arrayName(arrayName)
-		, index(index) {}
+			: arrayName(arrayName)
+			, index(index) {}
+	Value* codeGen() override;
+	std::string out() override;
+};
+
+class ArrayJoinAST : public AST {
+	std::string arrayName;
+	AST* R;
+
+public:
+	ArrayJoinAST(std::string arrayName, AST* R)
+			: arrayName(arrayName)
+			, R(R) {}
 	Value* codeGen() override;
 	std::string out() override;
 };

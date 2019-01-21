@@ -112,19 +112,59 @@ Value* ArrayAST::codeGen() {
 		mBuilder.CreateStore(v, element);
 	}
 
-	return array;
+	// create a struct and store it there
+	std::vector<Type*> structTypes = {i32, arrayType}; // size, array pointer
+	auto* arrayStructType = StructType::create(mContext, makeArrayRef(structTypes), "array_type");
+	globalTypes.push_back(arrayStructType);
+
+	auto* structPointer = CreateBlockAlloca(currentFunc, "tmp_struct", arrayStructType);
+	        // new AllocaInst(arrayStructType, 0, "alloc_list", currentFunc->getEntryBlock());
+	        // CreateBlockAlloca(currentFunc, "tmp_struct", arrayStructType);
+
+	auto* foo = cast<PointerType>(structPointer->getType()->getScalarType())->getElementType();
+
+	// set array size
+	std::vector<Value*> index = {ConstantInt::get(mContext, APInt(32, 0)), ConstantInt::get(mContext, APInt(32, 0))};
+	auto* sizeValue = ConstantInt::get(mContext, APInt(32, arraySize));
+	auto* sizeElement = mBuilder.CreateGEP(structPointer, makeArrayRef(index));
+	mBuilder.CreateStore(sizeValue, sizeElement);
+
+	// set pointer
+	index = {ConstantInt::get(mContext, APInt(32, 0)), ConstantInt::get(mContext, APInt(32, 1))};
+	auto* ptrElement = mBuilder.CreateGEP(structPointer, makeArrayRef(index));
+	mBuilder.CreateStore(array, ptrElement);
+
+	return structPointer;
 }
 
 Value* ArrayGetAST::codeGen() {
 	auto a = namedVariables[arrayName];
-	auto* array = mBuilder.CreateLoad(a);
+	auto* arrayHolder = mBuilder.CreateLoad(a);
+	arrayHolder = mBuilder.CreateLoad(arrayHolder);
 
 	auto* arrayIndex = index->codeGen();
 	assert(arrayIndex->getType()->isIntegerTy() && "Index must be an integer");
 	assert(arrayIndex->getType()->getPrimitiveSizeInBits() == 32 && "Warring: non-32bit integer may have unexpected results");
 
+	auto* array = mBuilder.CreateGEP(arrayHolder, ConstantInt::get(mContext, APInt(32, 1))); // extract the pointer from the struct
 	auto* element = mBuilder.CreateGEP(array, arrayIndex);
+
 	return mBuilder.CreateLoad(element);
+}
+
+Value* ArrayJoinAST::codeGen() {
+	auto a = namedVariables[arrayName];
+	auto* array = mBuilder.CreateLoad(a);
+	assert(array != nullptr && "Array is not defined");
+
+	auto* rightArray = R->codeGen();
+	assert(rightArray != nullptr && "Right hand array null");
+
+	return nullptr;
+
+//	Function* reallocCall = mModule->getFunction("realloc");
+//	std::vector<Value*> reallocArgs = {ConstantInt::get(mContext, APInt(32, arraySize))};
+//	Value* reallocArray = mBuilder.CreateCall(reallocCall, reallocArgs);
 }
 
 Value* LoadVariableAST::codeGen() {
@@ -156,6 +196,10 @@ std::string ArrayAST::out() {
 }
 
 std::string ArrayGetAST::out() {
+	return std::string("Not Implemented");
+}
+
+std::string ArrayJoinAST::out() {
 	return std::string("Not Implemented");
 }
 

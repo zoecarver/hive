@@ -12,6 +12,7 @@ extern IRBuilder<> mBuilder;
 extern std::unique_ptr<Module> mModule;
 extern std::map<std::string, AllocaInst*> namedVariables;
 extern std::map<std::string, Value*> namedArgs;
+extern std::vector<Type*> globalTypes;
 extern Function* currentFunc;
 
 extern AllocaInst* CreateBlockAlloca(Function* func, std::string name, Type* type);

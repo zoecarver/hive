@@ -26,6 +26,16 @@ std::string externFree() {
 	return proto->out();
 }
 
+std::string declareTypes() {
+	std::string outString;
+	llvm::raw_string_ostream rso(outString);
+
+	for (auto* t: globalTypes)
+		t->print(rso);
+
+	return outString;
+}
+
 int main(int argc, char** argv) {
 	if(argc > 1) {
 		yyin = fopen(argv[1], "r");
@@ -36,6 +46,7 @@ int main(int argc, char** argv) {
 	yyparse();
 
 	auto output = externMalloc() + externFree() + res->out();
+	output = declareTypes() + output;
 
 	std::cout << output << std::endl;
 	std::ofstream outputFile;
